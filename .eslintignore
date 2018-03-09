@@ -1,0 +1,4 @@
+dist/*
+typings/*
+webpack/*
+node_modules/*

@@ -1,0 +1,59 @@
+{
+    "presets": [
+        ["env", {
+            "targets": {
+                "node": "current",
+            },
+            "loose": true,
+            "debug": false,
+            "uglify": true,
+            "modules": false,
+            "useBuiltIns": "usage"
+        }],
+        "react"
+    ],
+    "plugins": [
+        "dual-import",
+        "add-module-exports",
+        "syntax-dynamic-import",
+        "transform-imports",
+        "transform-decorators-legacy",
+        ["transform-class-properties", { "spec": true }],
+        "transform-object-rest-spread",
+        ["transform-react-jsx", {}]
+    ],
+    "env": {
+        "test": {
+            "presets": [["env"], "react"],
+            "plugins": [
+                "transform-es2015-modules-commonjs"
+            ]
+        },
+        "development": {
+            "plugins": [
+                "react-hot-loader/babel",
+                "transform-react-display-name",
+                ["transform-runtime", {
+                    "helpers": false,
+                    "polyfill": false,
+                    "regenerator": true,
+                    "moduleName": "babel-runtime"
+                }]
+            ],
+            "sourceMaps": true
+        },
+        "production": {
+            "presets": ["minify"],
+            "plugins": [
+                "transform-react-inline-elements",
+                "transform-react-constant-elements",
+                "transform-react-pure-class-to-function",
+                ["transform-react-remove-prop-types", {
+                    "mode": "wrap",
+                    "ignoreFilenames": ["node_modules"],
+                    "additionalLibraries": ["react-immutable-proptypes"]
+                }]
+            ]
+        }
+    }
+}

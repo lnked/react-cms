@@ -1,0 +1,121 @@
+@import 'assets/styles/_global.scss';
+
+.wrapper {
+    display: block;
+    position: relative;
+}
+
+.label {
+    font-size: 0;
+    display: block;
+    position: relative;
+}
+
+.error,
+.hint {
+    margin-top: 5px;
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1;
+    letter-spacing: .02ex;
+}
+
+.error {
+    color: $c-amaranth;
+}
+
+.hint {
+    color: $c-pink-swan;
+    text-align: right;
+}
+
+.clear {
+    border: 0;
+    outline: 0;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    text-align: center;
+    background-color: transparent;
+    background-image: url(components/input/assets/clear.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 10px 10px;
+    cursor: pointer;
+    color: $c-pink-swan;
+
+    &:hover {
+        color: $c-black;
+    }
+}
+
+.control {
+    width: 100%;
+    color: $c-black;
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-family: $font-family;
+    background-color: $c-white;
+    border: 1px solid $c-border;
+    transition: border-color $a-time $a-func, color $a-time $a-func;
+    user-select: text;
+    cursor: auto;
+    outline: 0;
+
+    &_input {
+        height: 42px;
+        padding: 0 12px;
+    }
+
+    &_textarea {
+        resize: vertical;
+        min-height: 42px;
+        max-height: 300px;
+        padding: 10px 12px;
+    }
+
+    &_error {
+        border-color: $c-amaranth;
+        box-shadow: 0 0 0 2px $c-red;
+    }
+
+    &:placeholder {
+        color: $c-pink-swan;
+        opacity: 1;
+        transition: opacity $a-time $a-func;
+        text-overflow: ellipsis;
+    }
+
+    &:focus:placeholder {
+        color: transparent;
+        opacity: 0;
+    }
+
+    &::-ms-clear {
+        display: none;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-calendar-picker-indicator {
+        display: none;
+        appearance: none;
+    }
+
+    &:-webkit-autofill {
+        box-shadow: 0 0 0 1000px #fff inset;
+    }
+
+    &:focus {
+        border-color: $c-cobalt;
+    }
+
+    &:disabled {
+        opacity: .4;
+        cursor: default;
+    }
+}

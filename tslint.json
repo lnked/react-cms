@@ -1,0 +1,103 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint:latest",
+        "tslint-react"
+    ],
+    "jsRules": {},
+    "rules": {
+        "indent": [
+            true,
+            "spaces"
+        ],
+        "quotemark": [
+            true,
+            "single",
+            "jsx-double"
+        ],
+        "no-console": [
+            false
+        ],
+        "jsx-alignment": [
+            false
+        ],
+        "trailing-comma": [
+            false,
+            {
+                "multiline": "never",
+                "singleline": "never"
+            }
+        ],
+        "semicolon": [
+            true,
+            "never",
+            "ignore-interfaces"
+        ],
+        "jsx-boolean-value": [
+            "never",
+            "always"
+        ],
+        "variable-name": [
+            true,
+            "ban-keywords",
+            "check-format",
+            "allow-snake-case",
+            "allow-pascal-case",
+            "allow-leading-underscore"
+        ],
+        "member-ordering": [
+            true,
+            {
+                "order": [
+                    "public-static-field",
+                    "public-instance-field",
+                    "public-constructor",
+                    "private-static-field",
+                    "private-instance-field",
+                    "private-constructor",
+                    "public-instance-method",
+                    "protected-instance-method",
+                    "private-instance-method"
+                ]
+            }
+        ],
+        "max-line-length": [
+            true,
+            {
+                "limit": 120,
+                "ignore-pattern": "^import |^global |^export {(.*?)}"
+            }
+        ],
+        "no-unused-expression": [
+            false,
+            "allow-fast-null-checks"
+        ],
+        "no-empty": false,
+        "no-namespace": false,
+        "member-access": false,
+        "array-type": false,
+        "arrow-parens": false,
+        "no-var-requires": false,
+        "ordered-imports": false,
+        "jsx-no-lambda": false,
+        "jsx-self-close": true,
+        "interface-name": false,
+        "jsx-no-string-ref": true,
+        "jsx-curly-spacing": "always",
+        "jsx-wrap-multiline": true,
+        "space-within-parens": false,
+        "jsx-no-multiline-js": false,
+        "templates-use-public": false,
+        "no-shadowed-variable": false,
+        "no-submodule-imports": false,
+        "no-import-side-effect": false,
+        "no-unnecessary-generics": false,
+        "no-implicit-dependencies": false,
+        "object-literal-sort-keys": false,
+        "interface-over-type-literal": false,
+        "space-before-function-paren": true,
+        "no-object-literal-type-assertion": false
+    },
+    "rulesDirectory": []
+}
