@@ -1,26 +1,30 @@
-[![license](https://img.shields.io/github/license/lnked/react-starter.svg)](https://github.com/lnked/react-starter/blob/fastest/LICENSE)
-[![Build Status](https://travis-ci.org/lnked/react-starter.svg?branch=master)](https://travis-ci.org/lnked/react-starter)
+[![license](https://img.shields.io/github/license/lnked/react-cms.svg)](https://github.com/lnked/react-cms/blob/fastest/LICENSE)
+[![Build Status](https://travis-ci.org/lnked/react-cms.svg?branch=master)](https://travis-ci.org/lnked/react-cms)
 
-[![Code Climate](https://codeclimate.com/github/lnked/react-starter/badges/gpa.svg)](https://codeclimate.com/github/lnked/react-starter)
-[![Issue Count](https://codeclimate.com/github/lnked/react-starter/badges/issue_count.svg)](https://codeclimate.com/github/lnked/react-starter)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/7cb8a239e7afa9f101d5/maintainability)](https://codeclimate.com/github/lnked/react-cms/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/7cb8a239e7afa9f101d5/test_coverage)](https://codeclimate.com/github/lnked/react-cms/test_coverage)
+
+[![Code Climate](https://codeclimate.com/github/lnked/react-cms/badges/gpa.svg)](https://codeclimate.com/github/lnked/react-cms)
+[![Issue Count](https://codeclimate.com/github/lnked/react-cms/badges/issue_count.svg)](https://codeclimate.com/github/lnked/react-cms)
 
 ---
 
-React-starter a react web sterter kit.
+react-cms a react web sterter kit.
 
 ## Installation
 
 #### GIT
 
 ```bash
-git clone -b master git@github.com:lnked/react-starter.git
+git clone -b master git@github.com:lnked/react-cms.git
 ```
 
 OR
 
 ```bash
 git init
-git remote add origin git@github.com:lnked/react-starter.git
+git remote add origin git@github.com:lnked/react-cms.git
 git fetch
 ```
 
@@ -93,4 +97,4 @@ yarn run lint:fix
 - [ ] Storybook
 
 ## Get in touch
-- Bugs / Suggestions: [open an issue](https://github.com/lnked/react-starter/issues)
+- Bugs / Suggestions: [open an issue](https://github.com/lnked/react-cms/issues)

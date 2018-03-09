@@ -15,7 +15,7 @@ notifications:
     on_success: change
   slack:
     rooms:
-      - celebro:RBaf3z6RftDAVPt3TjN4QBgE#react-starter
+      - celebro:wrLBg1mqY4MuL3yHX4itbAbA#react-cms
 
 cache:
   yarn: true
@@ -38,4 +38,4 @@ script:
 
 addons:
   code_climate:
-    repo_token: 2b32652090b39c2cc95f0ea3ca3e2c7ff452b75388a81f0f4cfacbce4588f6e6
+    repo_token: 671eb6f25585825b98eeac395c3d1ddea379f38402c00ac61d77afdbe0ebb926
