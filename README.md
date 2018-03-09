@@ -1,11 +1,8 @@
-[![license](https://img.shields.io/github/license/lnked/react-cms.svg)](https://github.com/lnked/react-cms/blob/fastest/LICENSE)
+[![license](https://img.shields.io/github/license/lnked/react-cms.svg)](https://github.com/lnked/react-cms/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/lnked/react-cms.svg?branch=master)](https://travis-ci.org/lnked/react-cms)
-
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/7cb8a239e7afa9f101d5/maintainability)](https://codeclimate.com/github/lnked/react-cms/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/7cb8a239e7afa9f101d5/test_coverage)](https://codeclimate.com/github/lnked/react-cms/test_coverage)
-
-[![Code Climate](https://codeclimate.com/github/lnked/react-cms/badges/gpa.svg)](https://codeclimate.com/github/lnked/react-cms)
 [![Issue Count](https://codeclimate.com/github/lnked/react-cms/badges/issue_count.svg)](https://codeclimate.com/github/lnked/react-cms)
 
 ---
