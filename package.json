@@ -226,13 +226,5 @@
         "webpack-svgstore-plugin": "4.0.1",
         "webpack-visualizer-plugin": "0.1.11",
         "xml-loader": "1.2.1"
-    },
-    "peerDependencies": {
-        "babel-core": "6.26.0",
-        "node-sass": "4.7.2",
-        "pug": "2.0.0-rc.4",
-        "sugarss": "1.0.1",
-        "svgo": "1.0.3",
-        "tslint": "5.9.1"
     }
 }

@@ -187,10 +187,10 @@ export default class Dashboard extends React.Component<{}, {}> {
     renderInput = () => {
         return (
             <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
-                <SpeechText>
+                <SpeechText propname="value">
                     <Input name="input0" value="" />
                 </SpeechText><br /><br />
-                <SpeechText>
+                <SpeechText propname="placeholder">
                     <Input name="input0" value="" multiline={4} />
                 </SpeechText><br /><br />
                 <Input name="input1" value="Входящие общие папки" cleaned /><br /><br />
