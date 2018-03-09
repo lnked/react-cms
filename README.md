@@ -88,10 +88,19 @@ yarn run lint:fix
 ```
 
 ## Expected
-- [x] TypeScript
-- [ ] Tests
-- [ ] Redux
-- [ ] Storybook
+- [x] Components
+- [ ] Dashboard
+- [ ] structure
+- [ ] entities
+- [ ] accounts
+- [ ] globals
+- [ ] assets
+- [ ] updates
+- [ ] locale
+- [ ] extensions
+- [ ] tasks
+- [ ] shop
+- [ ] settings
 
 ## Get in touch
 - Bugs / Suggestions: [open an issue](https://github.com/lnked/react-cms/issues)
