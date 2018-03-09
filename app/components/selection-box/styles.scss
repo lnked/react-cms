@@ -9,10 +9,10 @@
 }
 
 .item {
-    height: 42px;
+    height: 32px;
 
     &_default {
-        min-width: 121px;
+        min-width: 88px;
         text-align: center;
         background-color: $c-white;
         border: 1px solid $c-whisper;
@@ -24,7 +24,7 @@
 
     &_inline {
         &:not(:last-child) {
-            margin-right: 20px;
+            margin-right: 10px;
         }
     }
 
@@ -40,20 +40,20 @@
 
 .visible {
     width: 100%;
-    color: $c-black;
+    color: $c-input-text;
     display: block;
-    font-size: 1.2rem;
-    line-height: 42px;
+    font-size: 1.3rem;
+    line-height: 32px;
     text-align: center;
 }
 
 .item_default .visible {
-    height: 40px;
-    padding: 0 20px;
+    height: 30px;
+    padding: 0 7px;
 }
 
 .item_inline .visible {
-    height: 42px;
+    height: 32px;
 }
 
 .input:checked + .visible {

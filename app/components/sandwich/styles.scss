@@ -1,8 +1,8 @@
 @import 'assets/styles/_global.scss';
 
 .sandwich {
-    width: 42px;
-    height: 38px;
+    width: 32px;
+    height: 28px;
     outline: 0;
     cursor: pointer;
     position: relative;
@@ -10,8 +10,8 @@
     border: 1px solid $c-gainsboro;
 
     @media (max-width: $max-tablet) {
-        width: 42px;
-        height: 38px;
+        width: 32px;
+        height: 28px;
     }
 
     &__ln {
@@ -28,13 +28,13 @@
         &,
         &:before,
         &:after {
-            width: 17px;
+            width: 14px;
             height: 1px;
             position: absolute;
             background-color: $c-cobalt;
 
             @media (max-width: $max-tablet) {
-                width: 17px;
+                width: 14px;
                 height: 1px;
             }
         }
