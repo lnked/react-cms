@@ -49,11 +49,11 @@ $switch-width: ($switch-height * 2) - ($switch-bullet-padding);
 }
 
 .input:checked + .slider {
-    background-color: #2196f3;
+    background-color: $c-success;
 }
 
 .input:focus + .slider {
-    box-shadow: 0 0 1px #2196f3;
+    box-shadow: 0 0 1px $c-success;
 }
 
 .input:checked + .slider:before {

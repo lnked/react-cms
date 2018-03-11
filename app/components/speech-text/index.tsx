@@ -167,7 +167,7 @@ export default class SpeechText extends React.Component<T, S> {
                 {childrenWithProps}
 
                 <button type="button" onClick={this.handleToggle} className={cn.join(' ')}>
-                    <img src={require('./assets/microphone.svg')} className={css.icon} alt="" />
+                    <img src={require('./assets/voice-recorder.svg')} className={css.icon} alt="" />
                 </button>
             </div>
         )

@@ -1,9 +1,9 @@
-@mixin outline($color, $shadow-size: 2, $box-shadow: true, $text-shadow: false, $add-shadow: '') {
+@mixin outline($color, $shadow-size: 2, $box-shadow: true, $text-shadow: false) {
     outline: 0;
 
     &:focus {
         @if $box-shadow == true {
-            box-shadow: 0 0 0 $shadow-size #fff, 0 0 0 $shadow-size + $shadow-size $color $add-shadow;
+            box-shadow: 0 0 0 #{$shadow-size}px #fff, 0 0 0 #{$shadow-size * 2}px $color;
         }
 
         @if $text-shadow == true {
@@ -11,7 +11,7 @@
         }
 
         @else {
-            box-shadow: 0 0 0 $shadow-size rgba($color, .5) $add-shadow;
+            box-shadow: 0 0 0 #{$shadow-size}px rgba($color, .5);
         }
     }
 }

@@ -16,7 +16,8 @@
     width: 100%;
     height: 32px;
     outline: none;
-    padding: 0 7px;
+    padding-left: 16px;
+    padding-right: 7px;
     color: $c-input-text;
     font-size: 1.3rem;
     font-weight: 400;
@@ -24,10 +25,11 @@
     background-color: $c-white;
     border: 1px solid $c-whisper;
     transition: border-color $a-time $a-func, color $a-time $a-func;
-    appearance: textfield;
     -webkit-rtl-ordering: logical;
     user-select: text;
     cursor: auto;
+
+    @include outline($c-focus-color);
 
     &:placeholder {
         color: $c-pink-swan;
@@ -48,15 +50,10 @@
     &::-webkit-inner-spin-button,
     &::-webkit-calendar-picker-indicator {
         display: none;
-        appearance: none;
     }
 
     &:-webkit-autofill {
         box-shadow: 0 0 0 1000px #fff inset;
-    }
-
-    &:focus {
-        border-color: $c-cobalt;
     }
 
     &:disabled {
@@ -71,7 +68,7 @@
     border: 0;
     outline: 0;
     position: absolute;
-    right: 12px;
+    right: 10px;
     top: 50%;
     font-size: 0;
     line-height: 0;
@@ -96,11 +93,13 @@
 
 .grill {
     position: absolute;
-    left: 10px;
+    left: 7px;
     top: 0;
     bottom: 0;
     z-index: 10;
-    font-size: 1.4rem;
+    color: $c-success;
+    font-size: 1.5rem;
+    font-weight: 600;
     line-height: 32px;
 }
 

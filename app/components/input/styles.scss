@@ -31,11 +31,12 @@
 
 .clear {
     border: 0;
+    padding: 0;
     outline: 0;
     font-size: 0;
     line-height: 0;
     position: absolute;
-    right: 12px;
+    right: 10px;
     top: 50%;
     width: 10px;
     height: 10px;
@@ -46,8 +47,8 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 10px 10px;
-    cursor: pointer;
     color: $c-pink-swan;
+    cursor: pointer;
 
     &:hover {
         color: $c-black;
@@ -65,7 +66,8 @@
     transition: border-color $a-time $a-func, color $a-time $a-func;
     user-select: text;
     cursor: auto;
-    outline: 0;
+
+    @include outline($c-focus-color);
 
     &_input {
         height: 32px;
@@ -76,7 +78,7 @@
         resize: vertical;
         min-height: 32px;
         max-height: 300px;
-        padding: 5px 7px;
+        padding: 7px 7px;
     }
 
     &_error {
@@ -108,10 +110,6 @@
 
     &:-webkit-autofill {
         box-shadow: 0 0 0 1000px #fff inset;
-    }
-
-    &:focus {
-        border-color: $c-cobalt;
     }
 
     &:disabled {

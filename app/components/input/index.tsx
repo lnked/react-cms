@@ -14,6 +14,7 @@ interface T {
     cleaned?: boolean;
     className?: string | boolean;
     placeholder?: string;
+    autoReseze?: boolean;
     tabindex?: number | boolean;
     maxlength?: number | boolean;
     multiline?: number | boolean;
@@ -38,6 +39,7 @@ export default class Input extends React.Component<T, S> {
         maxlength: false,
         className: false,
         multiline: false,
+        autoReseze: true,
         placeholder: 'Введите текст…',
         handleChange: (value) => {
             console.log(': = ', value)

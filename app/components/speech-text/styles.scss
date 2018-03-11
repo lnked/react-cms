@@ -11,49 +11,60 @@
     }
 }
 
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, .4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+}
+
 .wrapper {
     position: relative;
 }
 
 .button {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 13px;
+    font-size: 0;
+    line-height: 1;
     position: absolute;
     right: 10px;
-    top: 11px;
+    top: 10px;
     border: 0;
     padding: 0;
     outline: none;
     cursor: pointer;
     background: none;
+    user-select: none;
     text-align: center;
 
     &:after {
-        width: 16px;
-        height: 16px;
         content: '';
+        width: 18px;
+        height: 13px;
         display: block;
-        position: absolute;
-        left: 50%;
-        top: 50%;
+        position: absolute 0;
         opacity: 0;
-        margin-top: -8px;
-        margin-left: -8px;
-        border-radius: 50%;
-        background-color: rgba(#ff5c5c, .8);
-        border: 2px solid #f33;
         transition: opacity $a-micro-time ease;
+        box-shadow: 0 0 0 rgba(204, 169, 44, .4);
+    }
+
+    &.started:after {
+        opacity: 1;
+        animation: pulse 1s infinite;
     }
 }
 
-.started:after {
-    opacity: 1;
-    animation: bounce .5s infinite ease-in-out;
-}
-
 .icon {
-    max-width: 12px;
-    max-height: 20px;
+    width: 18px;
+    height: 13px;
     display: inline-block;
     vertical-align: middle;
 }
