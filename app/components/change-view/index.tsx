@@ -4,39 +4,54 @@ import * as css from './styles.scss'
 import { Icon } from 'components'
 
 interface T {
-    view: string;
+    active: 'table' | 'list' | 'thumbnails';
     showTitle: boolean;
     className: string;
-    handleClick: ((type: string) => void);
+    handleChange: ((type: string) => void);
 }
 
-export default class ChangeView extends React.Component<T, {}> {
+interface S {
+    active: 'table' | 'list' | 'thumbnails';
+}
+
+export default class ChangeView extends React.Component<T, S> {
     static defaultProps = {
+        active: 'table',
         className: '',
-        showTitle: true,
-        handleClick: (type) => {
+        showTitle: false,
+        handleChange: (type) => {
             console.log('click button: ', type)
         }
     }
 
-    handleClick = (e) => (type: string) => {
+    state = {
+        active: this.props.active
+    }
+
+    handleChange = (active) => (e) => {
         e.preventDefault()
 
-        this.props.handleClick(type)
+        this.setState({ active })
+
+        if (this.props.handleChange) {
+            this.props.handleChange(active)
+        }
     }
 
     renderItem = (type: string, name: string) => {
         const cn: any = []
         const label: any = []
 
-        cn.push(css.item)
-        cn.push(`${css[`item_${type}`]}`)
+        const { active } = this.state
+        const { showTitle } = this.props
 
-        if (type === this.props.view) {
+        cn.push(css.item)
+
+        if (type && type === active) {
             cn.push(css.item_active)
         }
 
-        if (this.props.showTitle) {
+        if (showTitle) {
             cn.push(css.item_single)
 
             label.push(
@@ -46,12 +61,8 @@ export default class ChangeView extends React.Component<T, {}> {
             cn.push(css.item_half)
         }
 
-        // <svg className={css.icon} role="presentation" aria-hidden="true" aria-labelledby="title">
-        //     <use xlinkHref={`#${type}`} />
-        // </svg>
-
         return (
-            <button type="button" className={cn.join(' ')} onClick={this.handleClick.bind(this, type)}>
+            <button className={cn.join(' ')} onClick={this.handleChange(type)}>
                 <Icon symbol={type} className={css.icon} hidden={true} />
                 { label }
             </button>
@@ -61,13 +72,9 @@ export default class ChangeView extends React.Component<T, {}> {
     render () {
         const cn: any = []
 
-        const { className, showTitle } = this.props
+        const { className } = this.props
 
         cn.push(css.view)
-
-        if (!showTitle) {
-            cn.push(css.half)
-        }
 
         if (className) {
             cn.push(className)
@@ -75,8 +82,9 @@ export default class ChangeView extends React.Component<T, {}> {
 
         return (
             <div className={cn.join(' ')}>
-                { this.renderItem('table', 'Таблица') }
-                { this.renderItem('list', 'Список') }
+                {this.renderItem('table', 'Таблица')}
+                {this.renderItem('thumbnails', 'Список с картинками')}
+                {this.renderItem('list', 'Список')}
             </div>
         )
     }

@@ -8,7 +8,7 @@ import {
     Switch
 } from 'react-router-dom'
 
-import { Transition } from 'react-transition-group'
+import Transition from 'react-transition-group/Transition'
 
 // Layouts
 import { CoreLayout } from 'layouts'
@@ -140,8 +140,10 @@ export default class App extends React.Component<{}, S> {
                                     }
 
                                     return (
-                                        <Transition timeout={1500}>
-                                            <Component {...props} className={`fade fade-${status}`} />
+                                        <Transition timeout={1000}>
+                                            {(status) => (
+                                                <Component {...props} className={`fade fade-${status}`} />
+                                            )}
                                         </Transition>
                                     )
                                 }

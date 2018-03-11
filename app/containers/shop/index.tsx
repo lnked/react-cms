@@ -3,10 +3,16 @@ import * as React from 'react'
 
 import { Content } from 'segments'
 
-export default class Shop extends React.Component<{}, {}> {
+interface P {
+    className: string;
+}
+
+export default class Shop extends React.Component<P, {}> {
     render () {
+        const { className } = this.props
+
         return (
-            <Content>
+            <Content className={className}>
                 Shopping!
 
                 orders<br />

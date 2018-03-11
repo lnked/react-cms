@@ -1,5 +1,4 @@
 export const view: string;
-export const half: string;
 export const item: string;
 export const item_half: string;
 export const itemHalf: string;

@@ -1,29 +1,15 @@
 @import 'assets/styles/_global.scss';
 
 .view {
+    height: 28px;
     font-size: 0;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
-}
-
-.half {
-    width: 140px;
-    height: 38px;
-    position: relative;
-    align-items: stretch;
+    border-radius: 2px;
     background-color: $c-white;
-
-    &:before {
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: 0;
-        width: 1px;
-        height: 100%;
-        background-color: $c-whisper;
-    }
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 20, .1);
 }
 
 .item {
@@ -31,12 +17,17 @@
     cursor: pointer;
     border: 0;
     padding: 0;
-    outline: none;
+    outline: 0;
     line-height: 1;
     position: relative;
+    border-radius: 2px;
     text-decoration: none;
     background-color: transparent;
-    transition: color $a-time $a-func, background-color $a-time $a-func;
+    transition: background-color $a-micro-time $a-func;
+
+    &:not(:last-child) {
+        border-right: 1px solid rgba(0, 0, 20, .1);
+    }
 
     &:before {
         content: '';
@@ -49,12 +40,8 @@
         will-change: opacity;
     }
 
-    &:hover {
-        color: $c-cobalt;
-    }
-
     &_half {
-        width: 50%;
+        width: 36px;
         height: 100%;
         display: flex;
         align-items: center;
@@ -62,8 +49,9 @@
     }
 
     &_active {
+        color: $c-black;
         cursor: default;
-        color: $c-cobalt;
+        background-image: linear-gradient(#e4e5e7, #eaebec);
     }
 
     &_single {
@@ -75,20 +63,11 @@
             border-right: 1px solid $c-whisper;
         }
     }
-
-    .half &:hover {
-        color: $c-white;
-        background-color: $c-cobalt;
-
-        &:before {
-            opacity: 1;
-        }
-    }
 }
 
 .icon {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     display: inline-block;
     vertical-align: middle;
 

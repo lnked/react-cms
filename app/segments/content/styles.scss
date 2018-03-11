@@ -8,3 +8,22 @@
     padding: $content-padding;
 }
 
+// :global {
+//     .fade-entering {
+//         opacity: .01;
+//     }
+
+//     .fade-entered {
+//         opacity: 1;
+//         transition: opacity 1000ms ease-in;
+//     }
+
+//     .fade-exiting {
+//         opacity: 1;
+//     }
+
+//     .fade-exited {
+//         opacity: .01;
+//         transition: opacity 800ms ease-in;
+//     }
+// }
