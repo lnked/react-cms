@@ -1,4 +1,5 @@
 import Aside from 'segments/aside'
+import Search from 'segments/search'
 import Dialog from 'segments/dialog'
 import Layout from 'segments/layout'
 import Sidebar from 'segments/sidebar'
@@ -8,6 +9,7 @@ import RequestsPanel from 'segments/requests-panel'
 
 export {
     Aside,
+    Search,
     Dialog,
     Layout,
     Sidebar,

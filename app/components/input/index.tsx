@@ -111,7 +111,7 @@ export default class Input extends React.Component<T, S> {
         const props: any = {}
 
         const { value } = this.state
-        const { name, error, cleaned, multiline, maxlength, tabindex, className } = this.props
+        const { name, error, cleaned, multiline, maxlength, placeholder, tabindex, className } = this.props
 
         const id = `input_${name}`
 
@@ -135,6 +135,7 @@ export default class Input extends React.Component<T, S> {
         props.autoCorrect = 'off'
         props.autoComplete = 'off'
         props.autoCapitalize = 'off'
+        props.placeholder = placeholder
         props.onChange = this.handleChange
         props.className = cn.join(' ')
 
