@@ -101,6 +101,7 @@ yarn run lint:fix
 - [ ] tasks
 - [ ] shop
 - [ ] settings
+- [ ] REMOVE Any type | typesctipt
 
 ## Get in touch
 - Bugs / Suggestions: [open an issue](https://github.com/lnked/react-cms/issues)
