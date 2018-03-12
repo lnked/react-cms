@@ -20,9 +20,9 @@ export default class Updates extends React.Component<{}, S> {
 
     _handleReleasesLoad () {
         axios
-            .get('/api/releases')
+            .get('/api/entities/releases.json')
             .then((response) => {
-                this.setState({ releases: response.data.json })
+                this.setState({ releases: response.data })
             })
             .catch((err) => {
                 console.log(err)

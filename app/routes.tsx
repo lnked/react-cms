@@ -12,7 +12,6 @@ import Transition from 'react-transition-group/Transition'
 
 // Layouts
 import { CoreLayout } from 'layouts'
-import Dashboard from './containers/dashboard/index';
 
 // Containers
 import {
@@ -44,8 +43,7 @@ const routes: any = [
         path: '/',
         exact: true,
         component: Dashboard
-    },
-    {
+    }, {
         path: '/auth',
         component: Auth
     }, {
@@ -115,7 +113,7 @@ export default class App extends React.Component<{}, S> {
         //         .get(`/api/${page}`)
         //         .then((response) => {
         //             if (typeof (response.data.json) !== 'undefined') {
-        //                 this.setState({ ...this.state, links: response.data.json, pathname })
+        //                 this.setState({ ...this.state, links: response.data, pathname })
         //             }
         //         })
         //         .catch((err) => {
