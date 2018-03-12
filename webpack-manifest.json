@@ -1,10 +1,11 @@
 {
-  "/app.js": "/js/app.b1325.js",
-  "/images/bell-hover.svg": "/images/bell-hover-37c82.svg",
-  "/images/bell.svg": "/images/bell-b2c07.svg",
-  "/images/clear.svg": "/images/clear-45fde.svg",
-  "/images/logo.svg": "/images/logo-cf9b6.svg",
-  "/images/voice-recorder.svg": "/images/voice-recorder-adba8.svg",
-  "/runtime.js": "/js/runtime.d41d8.js",
-  "/vendors.js": "/js/vendors.cb10f.js"
+  "/react-cms/app.js": "/react-cms/js/app.b1325.js",
+  "/react-cms/fav/favicon.svg": "/react-cms/fav/manifest.webapp",
+  "/react-cms/images/bell-hover.svg": "/react-cms/images/bell-hover-37c82.svg",
+  "/react-cms/images/bell.svg": "/react-cms/images/bell-b2c07.svg",
+  "/react-cms/images/clear.svg": "/react-cms/images/clear-45fde.svg",
+  "/react-cms/images/logo.svg": "/react-cms/images/logo-cf9b6.svg",
+  "/react-cms/images/voice-recorder.svg": "/react-cms/images/voice-recorder-adba8.svg",
+  "/react-cms/runtime.js": "/react-cms/js/runtime.d41d8.js",
+  "/react-cms/vendors.js": "/react-cms/js/vendors.93a44.js"
 }
