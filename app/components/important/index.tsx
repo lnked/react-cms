@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 interface T {
-    variant: 'success' | 'amper' | 'red';
+    variant: 'error' | 'info' | 'normal' | 'success' | 'warning';
     children?: any;
 }
 

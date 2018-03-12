@@ -3,6 +3,7 @@ import Logo from 'components/logo'
 import Radio from 'components/radio'
 import Input from 'components/input'
 import Tabs from 'components/tabs'
+import Range from 'components/range'
 import Title from 'components/title'
 import Badge from 'components/badge'
 // import Layout from 'components/layout'
@@ -36,6 +37,7 @@ export {
     Radio,
     Input,
     Tabs,
+    Range,
     Title,
     Badge,
     Switch,

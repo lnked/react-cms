@@ -8,6 +8,7 @@ import {
 import {
     Tabs,
     Input,
+    Range,
     Title,
     Radio,
     Badge,
@@ -72,6 +73,14 @@ export default class Dashboard extends React.Component<{}, {}> {
                     Instead, you must gather card information in an Element and use.
                     You can also pass an existing card token to convert it into a <code>Source</code> object.</p>
                 </Important>
+            </div>
+        )
+    }
+
+    renderRange = () => {
+        return (
+            <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
+                <Range />
             </div>
         )
     }
@@ -213,10 +222,10 @@ export default class Dashboard extends React.Component<{}, {}> {
         return (
             <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
                 <SpeechText propname="value">
-                    <Input name="input0" value="" />
+                    <Input name="input0" required />
                 </SpeechText><br /><br />
                 <SpeechText propname="placeholder">
-                    <Input name="input0" value="" multiline={4} />
+                    <Input name="input0" required multiline={4} />
                 </SpeechText><br /><br />
                 <Input name="input1" value="Входящие общие папки" cleaned /><br /><br />
                 <Input name="input2" value="Входящие общие папки" cleaned /><br /><br />
@@ -309,6 +318,7 @@ export default class Dashboard extends React.Component<{}, {}> {
                         <Loader />
                         <Spinner /><br /><br />
                         {this.renderImportant()}
+                        {this.renderRange()}
                         {this.renderQuantity()}
                         {this.renderInput()}
                         {this.renderSelectionBox()}

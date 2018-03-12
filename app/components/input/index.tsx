@@ -12,6 +12,7 @@ interface T {
     focus?: boolean;
     error?: string | boolean;
     cleaned?: boolean;
+    required?: boolean;
     className?: string | boolean;
     placeholder?: string;
     autoReseze?: boolean;
@@ -35,6 +36,7 @@ export default class Input extends React.Component<T, S> {
         children: '',
         focus: false,
         cleaned: false,
+        required: false,
         tabindex: false,
         maxlength: false,
         className: false,
@@ -111,7 +113,7 @@ export default class Input extends React.Component<T, S> {
         const props: any = {}
 
         const { value } = this.state
-        const { name, error, cleaned, multiline, maxlength, placeholder, tabindex, className } = this.props
+        const { name, error, cleaned, required, multiline, maxlength, placeholder, tabindex, className } = this.props
 
         const id = `input_${name}`
 
@@ -129,6 +131,10 @@ export default class Input extends React.Component<T, S> {
             cn.push(css.control_textarea)
         } else {
             cn.push(css.control_input)
+        }
+
+        if (required) {
+            props.required = required
         }
 
         props.spellCheck = false

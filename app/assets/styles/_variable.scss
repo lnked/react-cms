@@ -98,13 +98,15 @@ $c-yellow:                      #ffc000;
 $c-button-link:                 #0052cc;
 $c-button-subtle-link:          #6b778c;
 
-$c-normal-color:                #fff;
-$c-normal-border:               #5e6591;
-$c-normal-background:           #5e6591;
+$c-normal-color:                rgb(80, 95, 121);
+$c-normal-border:               rgba(9, 30, 66, .04);
+$c-normal-background:           rgba(9, 30, 66, .04);
+$c-normal-background-hover:     rgba(9, 30, 66, .08);
 
 $c-primary-color:               #fff;
-$c-primary-border:              #098dd5;
-$c-primary-background:          #0e99e5;
+$c-primary-border:              #0052cc;
+$c-primary-background:          #0052cc;
+$c-primary-background-hover:    #0065ff;
 
 $c-info-color:                  #45b2e8;
 $c-info-border:                 #d4f3fd;

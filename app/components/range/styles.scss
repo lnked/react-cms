@@ -11,24 +11,14 @@
     padding: 13px 13px 13px 53px;
 }
 
-.box.success {
+.success {
     color: #373e42;
     background-color: #f6fff5;
     border: 1px solid rgba(58, 193, 51, .12);
     background-image: url(/img/documentation/icon-aside-important.svg);
 }
 
-.box.warning {
-    background-color: $c-yellow;
-    border: 1px solid $c-yellow;
-}
-
-.box.normal {
-    background-color: #f6fff5;
-    border: 1px solid #f6fff5;
-}
-
-.box.info {
+.box.amber {
     background-color: rgba(253, 200, 69, .1);
     border: 1px solid rgba(253, 200, 69, .3);
 }
@@ -38,7 +28,7 @@
     background-image: none;
 }
 
-.box.error {
+.box.red {
     background-color: rgba(224, 76, 76, .08);
     border: 1px solid rgba(224, 76, 76, .1);
 }
