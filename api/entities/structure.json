@@ -1,0 +1,65 @@
+[
+    {
+        "title": "Главная",
+        "expanded": true,
+        "children": [
+            {
+                "title": "Корзина"
+            }
+        ]
+    },
+    {
+        "title": "Новости и акции+",
+        "expanded": true
+    },
+    {
+        "title": "Страница авторизации+",
+        "expanded": true
+    },
+    {
+        "title": "Личный кабинет+",
+        "expanded": true,
+        "children": [
+            {
+                "title": "Войти+",
+                "expanded": true
+            },
+            {
+                "title": "Страница регистрации+",
+                "expanded": true
+            },
+            {
+                "title": "Восстановить пароль+",
+                "expanded": true
+            }
+        ]
+    },
+    {
+        "title": "Поиск по сайту+",
+        "expanded": true
+    },
+    {
+        "title": "Фотогалерея+",
+        "expanded": true
+    },
+    {
+        "title": "Текстовый раздел+",
+        "expanded": true
+    },
+    {
+        "title": "Обратная связь+",
+        "expanded": true
+    },
+    {
+        "title": "Тестовая страница",
+        "expanded": false,
+        "children": [
+            {
+                "title": "Потомок+"
+            },
+            {
+                "title": "Потомок 2+"
+            }
+        ]
+    }
+]
