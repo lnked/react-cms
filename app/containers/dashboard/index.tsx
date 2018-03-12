@@ -19,6 +19,7 @@ import {
     Sandwich,
     Quantity,
     // Truncate,
+    Important,
     Checkbox,
     SpeechText,
     ColorPicker,
@@ -47,6 +48,30 @@ export default class Dashboard extends React.Component<{}, {}> {
                     type="confirm"
                     title="Вы уверены что хотите удалить файл?"
                 />
+            </div>
+        )
+    }
+
+    renderImportant = () => {
+        return (
+            <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
+                <Important variant="success">
+                    <p>You cannot pass raw card information to <code>stripe.createSource(sourceData)</code>.
+                    Instead, you must gather card information in an Element and use.
+                    You can also pass an existing card token to convert it into a <code>Source</code> object.</p>
+                </Important>
+                <br /><br />
+                <Important variant="amber">
+                    <p>You cannot pass raw card information to <code>stripe.createSource(sourceData)</code>.
+                    Instead, you must gather card information in an Element and use.
+                    You can also pass an existing card token to convert it into a <code>Source</code> object.</p>
+                </Important>
+                <br/><br/>
+                <Important variant="red">
+                    <p>You cannot pass raw card information to <code>stripe.createSource(sourceData)</code>.
+                    Instead, you must gather card information in an Element and use.
+                    You can also pass an existing card token to convert it into a <code>Source</code> object.</p>
+                </Important>
             </div>
         )
     }
@@ -283,6 +308,7 @@ export default class Dashboard extends React.Component<{}, {}> {
                     <div>
                         <Loader />
                         <Spinner /><br /><br />
+                        {this.renderImportant()}
                         {this.renderQuantity()}
                         {this.renderInput()}
                         {this.renderSelectionBox()}

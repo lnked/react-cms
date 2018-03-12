@@ -47,28 +47,33 @@
     overflow: visible;
     user-select: none;
 
-    font-weight: 400;
+    font-weight: 500;
     text-align: center;
     white-space: nowrap;
     text-transform: none;
     text-decoration: none;
 
-    border-width: 1px;
+    border-width: 0;
     border-style: solid;
     border-radius: 1px;
 
     display: inline-block;
     vertical-align: middle;
 
-    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .04), 0 1px 2px 0 rgba(0, 0, 0, .05);
-    transition: background-color .1s ease-out, border-color .1s ease-out, box-shadow .15s cubic-bezier(.47, .03, .49, 1.38), color .1s ease-out;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, .08);
+    transition: background-color .1s ease-out, border-color .1s ease-out, transform .1s ease-out, box-shadow .15s cubic-bezier(.47, .03, .49, 1.38), color .1s ease-out;
+
+    // &:hover {
+    // }
 
     &:focus {
         outline: 0;
     }
 
     &:active {
-        box-shadow: inset 0 2px 0 rgba(0, 0, 0, .05), 0 1px 2px 0 rgba(0, 0, 0, .05);
+        opacity: .75;
+        transform: translate3d(0, 1px, 0);
+        box-shadow: inset 0 2px 10px 2px rgba(0, 0, 0, .04), 0 1px 0 0 rgba(0, 0, 0, .08);
     }
 
     & + & {
@@ -89,6 +94,7 @@
     &,
     &:active {
         box-shadow: none;
+        background-color: transparent;
     }
 }
 

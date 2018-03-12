@@ -16,6 +16,7 @@ import Sandwich from 'components/sandwich'
 import Quantity from 'components/quantity'
 import Checkbox from 'components/checkbox'
 import SpeechText from 'components/speech-text'
+import Important from 'components/important'
 import ChangeView from 'components/change-view'
 // import HintText from 'components/hint-text'
 // import MaskedText from 'components/masked-text'
@@ -47,6 +48,7 @@ export {
     Sandwich,
     Quantity,
     Checkbox,
+    Important,
     // HintText,
     // MaskedText,
     // RadioGroup,

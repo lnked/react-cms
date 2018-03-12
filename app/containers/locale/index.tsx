@@ -5,6 +5,11 @@ import { Button } from 'components'
 
 import { Content, Search } from 'segments'
 
+// import { Table, Cell, Header, Footer } from 'components/table'
+// import { Table, Cell, Header, Footer } from '../../components/table'
+
+// console.log(Table, Cell, Header, Footer)
+
 export default class Locale extends React.Component<{}, {}> {
     render () {
         return (
