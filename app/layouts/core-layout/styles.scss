@@ -29,11 +29,13 @@ $core-sidebar-width: $aside-width + $sidebar-width;
 }
 
 .body {
+    width: calc(100% - #{$sidebar-width});
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: calc(100% - #{$sidebar-width});
 
     &_short {
+        width: calc(100% - #{$core-sidebar-width});
         flex-basis: calc(100% - #{$core-sidebar-width});
     }
 }
