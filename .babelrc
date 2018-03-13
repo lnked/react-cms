@@ -59,13 +59,6 @@
         },
         "production": {
             "presets": [
-                [
-                    "env",
-                    {
-                        "modules": "commonjs"
-                    }
-                ],
-                "react",
                 "minify"
             ],
             "plugins": [
