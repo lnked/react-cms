@@ -28,7 +28,8 @@ const usesConfig = [
             importLoaders: 3,
             modules: true,
             namedExport: true,
-            camelCase: true
+            camelCase: true,
+            localIdentName: define.rs_release ? '_[hash:5]' : '[path]-[name]---[local]---[hash:base64:4]'
         }
     },
     // {

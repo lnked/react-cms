@@ -31,20 +31,20 @@ export default class Dashboard extends React.Component<{}, {}> {
     renderDialog = () => {
         return (
             <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
-                <Dialog type="alert" title="Предупреждение!" />
+                <Dialog type="alert" title="Предупреждение!" /><br /><br />
                 <Dialog type="prompt" title="Какой сейчас год?"
                     placeholder="Укажите текущий год"
                     value={2018}
-                />
+                /><br /><br />
                 <Dialog
                     type="prompt"
                     title="Какой сейчас год?"
                     placeholder="Укажите текущий год"
-                />
+                /><br /><br />
                 <Dialog
                     type="confirm"
                     title="Вы уверены что хотите удалить файл?"
-                />
+                /><br /><br />
                 <Dialog
                     type="confirm"
                     title="Вы уверены что хотите удалить файл?"
@@ -62,13 +62,25 @@ export default class Dashboard extends React.Component<{}, {}> {
                     You can also pass an existing card token to convert it into a <code>Source</code> object.</p>
                 </Important>
                 <br /><br />
-                <Important variant="amber">
+                <Important variant="error">
                     <p>You cannot pass raw card information to <code>stripe.createSource(sourceData)</code>.
                     Instead, you must gather card information in an Element and use.
                     You can also pass an existing card token to convert it into a <code>Source</code> object.</p>
                 </Important>
-                <br/><br/>
-                <Important variant="red">
+                <br /><br />
+                <Important variant="info">
+                    <p>You cannot pass raw card information to <code>stripe.createSource(sourceData)</code>.
+                    Instead, you must gather card information in an Element and use.
+                    You can also pass an existing card token to convert it into a <code>Source</code> object.</p>
+                </Important>
+                <br /><br />
+                <Important variant="normal">
+                    <p>You cannot pass raw card information to <code>stripe.createSource(sourceData)</code>.
+                    Instead, you must gather card information in an Element and use.
+                    You can also pass an existing card token to convert it into a <code>Source</code> object.</p>
+                </Important>
+                <br /><br />
+                <Important variant="warning">
                     <p>You cannot pass raw card information to <code>stripe.createSource(sourceData)</code>.
                     Instead, you must gather card information in an Element and use.
                     You can also pass an existing card token to convert it into a <code>Source</code> object.</p>
