@@ -7,18 +7,14 @@
 /.phpintel
 /___/
 /dist/
-/app/hoc/*
 /app/redux/
 /app/store.jsx
 /app/server.js
 /app/router.jsx
 /app/routes.jsx
 /app/routes.demo.jsx
-/app/constants.js
-/app/settings/routes.js
-/app/settings/fidebase.js
+/app/settings/
 /package-lock.json
-/package.old.json
 /features.md
 /fastest/vendors/
 
