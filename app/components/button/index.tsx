@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { withHandlers } from 'hoc'
+import { withHandlers } from 'hocs'
 
 interface T {
     type?: string;

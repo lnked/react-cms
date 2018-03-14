@@ -56,7 +56,7 @@ module.exports = {
         descriptionFiles: ['package.json', 'bower.json'],
         alias: {
             app: define.rs_root,
-            hoc: resolve(define.rs_root, 'hoc'),
+            hocs: resolve(define.rs_root, 'hocs'),
             utils: resolve(define.rs_root, 'utils'),
             typings: resolve(define.rs_root, 'typings'),
             assets: resolve(define.rs_root, 'assets'),
