@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { withHandlers } from 'hocs'
+// import { withHandlers } from 'hocs'
 
 interface T {
     type?: string;
@@ -15,8 +15,7 @@ interface T {
     handleClick?: () => void | boolean;
 }
 
-class Button extends React.PureComponent<T, {}> {
-// export default class Button extends React.PureComponent<T, {}> {
+export default class Button extends React.PureComponent<T, {}> {
     static defaultProps = {
         size: 'normal',
         type: 'button',
@@ -58,8 +57,8 @@ class Button extends React.PureComponent<T, {}> {
     }
 }
 
-const enhance = withHandlers({
-    onClick: ({ message }) => () => console.info(message)
-})
+// const enhance = withHandlers({
+//     onClick: ({ message }) => () => console.info(message)
+// })
 
-export default enhance(Button)
+// export default enhance(Button)

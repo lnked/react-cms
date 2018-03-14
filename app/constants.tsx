@@ -1,2 +1,1 @@
-export const GOOGLE_ANALYTICS_ID = 'UA-6032469-95'
 export const GOOGLE_ANALYTICS_ID = 'UA-0000000-00'
