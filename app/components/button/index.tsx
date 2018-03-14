@@ -1,6 +1,8 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
+import { withHandlers } from 'hoc'
+
 interface T {
     type?: string;
     size?: 'small' | 'large' | 'normal' | 'medium';
@@ -13,7 +15,8 @@ interface T {
     handleClick?: () => void | boolean;
 }
 
-export default class Button extends React.PureComponent<T, {}> {
+class Button extends React.PureComponent<T, {}> {
+// export default class Button extends React.PureComponent<T, {}> {
     static defaultProps = {
         size: 'normal',
         type: 'button',
@@ -54,3 +57,9 @@ export default class Button extends React.PureComponent<T, {}> {
         )
     }
 }
+
+const enhance = withHandlers({
+    onClick: ({ message }) => () => console.info(message)
+})
+
+export default enhance(Button)
