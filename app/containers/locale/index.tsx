@@ -11,6 +11,13 @@ import { Content, Search } from 'segments'
 // console.log(Table, Cell, Header, Footer)
 
 export default class Locale extends React.Component<{}, {}> {
+    // shouldComponentUpdate () {
+    //     const shouldUpdate =
+    //         !shallowEqual(prevProps, nextProps) ||
+    //         !shallowEqual(inst.state, nextState)
+
+    //     return shouldUpdate
+    // }
     render () {
         return (
             <Content>
