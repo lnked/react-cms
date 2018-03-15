@@ -46,6 +46,9 @@
             "layouts": [
                 "./app/layouts"
             ],
+            "variables": [
+                "./app/variables"
+            ],
             "containers": [
                 "./app/containers"
             ],
