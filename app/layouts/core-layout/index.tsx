@@ -39,6 +39,10 @@ export default class CoreLayout extends React.Component<T, S> {
         this.handleLoadPages()
     }
 
+    componentDidUpdate () {
+        window.scrollTo(0, 0)
+    }
+
     handleLoadPages = () => {
         axios
             .get('/api/entities/pages.json')
