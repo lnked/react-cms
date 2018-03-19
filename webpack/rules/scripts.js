@@ -52,7 +52,7 @@ const rules = [
         enforce: 'pre',
         test: /\.ts[x]?$/,
         options: {
-            fix: define.rs_production
+            fix: false
         },
         loader: 'tslint-loader',
         include: define.rs_root
