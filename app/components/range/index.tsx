@@ -1,5 +1,5 @@
 import * as React from 'react'
-// import * as css from './styles.scss'
+import * as css from './styles.scss'
 
 // interface T {
 //     variant: 'success' | 'amper' | 'red';
@@ -13,16 +13,11 @@ export default class Range extends React.PureComponent<{}, {}> {
     // }
 
     render () {
-        // const cn: any = []
-        // const { variant, children } = this.props
-
-        // cn.push(css.box)
-        // cn.push(css.alternate)
-
-        // cn.push(css[variant])
-
         return (
-            <input type="range" step="1" min="0" max="100" value="39" />
+            <div className={css.range}>
+                <input type="range" step="1" min="0" max="100" value="10" className={css.input} />
+                <input type="range" step="1" min="0" max="100" value="40" className={css.input} />
+            </div>
         )
     }
 }

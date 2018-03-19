@@ -28,6 +28,15 @@ import {
 } from 'components'
 
 export default class Dashboard extends React.Component<{}, {}> {
+    renderLoader = () => {
+        return (
+            <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
+                <Loader /><br /><br />
+                <Spinner />
+            </div>
+        )
+    }
+
     renderDialog = () => {
         return (
             <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
@@ -327,10 +336,9 @@ export default class Dashboard extends React.Component<{}, {}> {
 
                 <Widget title="Использовано свободного места">
                     <div>
-                        <Loader />
-                        <Spinner /><br /><br />
-                        {this.renderImportant()}
+                        {this.renderLoader()}
                         {this.renderRange()}
+                        {this.renderImportant()}
                         {this.renderQuantity()}
                         {this.renderInput()}
                         {this.renderSelectionBox()}
