@@ -7,4 +7,3 @@ export {
     PureLayout,
     CoreLayout
 }
-

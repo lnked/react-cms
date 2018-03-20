@@ -28,7 +28,7 @@ export default class ChangeView extends React.Component<T, S> {
         active: this.props.active
     }
 
-    handleChange = (active) => (e) => {
+    handleChange = active => (e) => {
         e.preventDefault()
 
         this.setState({ active })
@@ -54,16 +54,14 @@ export default class ChangeView extends React.Component<T, S> {
         if (showTitle) {
             cn.push(css.item_single)
 
-            label.push(
-                <span className={css.label} key="label">{ name }</span>
-            )
+            label.push(<span className={css.label} key="label">{ name }</span>)
         } else {
             cn.push(css.item_half)
         }
 
         return (
             <button className={cn.join(' ')} onClick={this.handleChange(type)}>
-                <Icon symbol={type} className={css.icon} hidden={true} />
+                <Icon symbol={type} className={css.icon} hidden />
                 { label }
             </button>
         )

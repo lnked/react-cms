@@ -135,24 +135,27 @@ export default class App extends React.Component<{}, S> {
                     <Switch>
 
                         {routes.map(({ component: Component, ...rest }: any, key) => (
-                            <Route {...rest} key={key} render={(props: any) => {
-                                if (rest.path !== this.state.pathname) {
-                                    if (rest.path) {
-                                        console.log('render ', rest.path)
+                            <Route
+                                {...rest}
+                                key={key}
+                                render={(props: any) => {
+                                    if (rest.path !== this.state.pathname) {
+                                        if (rest.path) {
+                                            console.log('render ', rest.path)
                                         // this.handleChangePath(rest.path)
+                                        }
+
+                                        return (
+                                            <Transition timeout={1000}>
+                                                {status => (
+                                                    <Component {...props} className={`fade fade-${status}`} />
+                                                )}
+                                            </Transition>
+                                        )
                                     }
 
-                                    return (
-                                        <Transition timeout={1000}>
-                                            {(status) => (
-                                                <Component {...props} className={`fade fade-${status}`} />
-                                            )}
-                                        </Transition>
-                                    )
-                                }
-
-                                return ''
-                            }} />
+                                    return ''
+                                }} />
                         ))}
 
                     </Switch>

@@ -24,7 +24,7 @@ export default class Search extends React.Component<T, {}> {
 
                 <Input
                     name={name}
-                    cleaning={true}
+                    cleaning
                     placeholder={placeholder}
                     className={css.input}
                 />

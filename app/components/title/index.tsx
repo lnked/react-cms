@@ -18,7 +18,9 @@ export default class Title extends React.Component<T, {}> {
 
     render () {
         const cn: any = []
-        const { type, size, label, children, className } = this.props
+        const {
+            type, size, label, children, className
+        } = this.props
 
         cn.push(css.title)
 

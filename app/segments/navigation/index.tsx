@@ -17,7 +17,7 @@ export default class Navigation extends React.Component<{}, {}> {
         })
     }
 
-    navbarItem = (item) => (
+    navbarItem = item => (
         <li className={css.item} key={item.id}>
             <Link to={item.url} className={css.link}>{item.title}</Link>
         </li>

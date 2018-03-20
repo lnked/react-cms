@@ -35,7 +35,9 @@ export default class Button extends React.PureComponent<T, {}> {
 
     render () {
         const cn: any = []
-        const { label, children, type, size, variant, isIcon, isDisabled, className } = this.props
+        const {
+            label, children, type, size, variant, isIcon, isDisabled, className
+        } = this.props
 
         cn.push(css.button)
         cn.push(css[`${size}`])

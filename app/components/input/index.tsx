@@ -64,7 +64,7 @@ export default class Input extends React.Component<T, S> {
 
     componentWillReceiveProps (nextProps) {
         if (nextProps.value !== this.state.value) {
-            this.setState({...this.state, value: nextProps.value})
+            this.setState({ ...this.state, value: nextProps.value })
         }
     }
 
@@ -90,19 +90,15 @@ export default class Input extends React.Component<T, S> {
         const { hint, error } = this.props
 
         if (hint) {
-            addition.push(
-                <span className={css.hint} key={[this.prefix, 'hint'].join('.')}>
-                    {hint}
-                </span>
-            )
+            addition.push(<span className={css.hint} key={[this.prefix, 'hint'].join('.')}>
+                {hint}
+            </span>)
         }
 
         if (error) {
-            addition.push(
-                <span className={css.error} key={[this.prefix, 'error'].join('.')}>
-                    {error}
-                </span>
-            )
+            addition.push(<span className={css.error} key={[this.prefix, 'error'].join('.')}>
+                {error}
+            </span>)
         }
 
         return addition
@@ -113,7 +109,9 @@ export default class Input extends React.Component<T, S> {
         const props: any = {}
 
         const { value } = this.state
-        const { name, error, cleaned, required, multiline, maxlength, placeholder, tabindex, className } = this.props
+        const {
+            name, error, cleaned, required, multiline, maxlength, placeholder, tabindex, className
+        } = this.props
 
         const id = `input_${name}`
 
@@ -145,7 +143,9 @@ export default class Input extends React.Component<T, S> {
         props.onChange = this.handleChange
         props.className = cn.join(' ')
 
-        props.ref = (c) => { this.textControl = c }
+        props.ref = (c) => {
+            this.textControl = c
+        }
 
         if (tabindex) {
             props.tabindex = tabindex
@@ -163,10 +163,12 @@ export default class Input extends React.Component<T, S> {
                 }
 
                 {(value && cleaned)
-                    ? <button type="button"
+                    ? <button
+                        type="button"
                         className={css.clear}
                         onClick={this.handleClear}
-                        key={[this.prefix, 'clear'].join('.')}><Icon symbol="close" hidden={true} /></button>
+                        key={[this.prefix, 'clear'].join('.')}><Icon symbol="close" hidden />
+                    </button>
                     : ''
                 }
             </label>

@@ -42,7 +42,9 @@ export default class Radio extends React.PureComponent<T, S> {
 
     render () {
         const { checked } = this.state
-        const { name, value, label, children } = this.props
+        const {
+            name, value, label, children
+        } = this.props
 
         const id = `radio_${name}_${value}`
 

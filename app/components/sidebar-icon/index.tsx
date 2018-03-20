@@ -42,7 +42,7 @@ export default class SidebarIcon extends React.Component<T, {}> {
 
         return (
             <span className={css.image}>
-                <Icon symbol={icon} className={css.pictogram} hidden={true} />
+                <Icon symbol={icon} className={css.pictogram} hidden />
             </span>
         )
     }

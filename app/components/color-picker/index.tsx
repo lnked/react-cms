@@ -32,7 +32,7 @@ export default class ColorPicker extends React.Component<T, S> {
     }
 
     handleClear = () => {
-        this.setState({...this.state, color: ''})
+        this.setState({ ...this.state, color: '' })
     }
 
     renderControl = () => {
@@ -43,11 +43,9 @@ export default class ColorPicker extends React.Component<T, S> {
         const pureColor = color ? color.replace('#', '') : ''
 
         if (pureColor) {
-            clearButton.push(
-                <button className={css.clear} key="clear" onClick={this.handleClear}>
-                    <Icon symbol="close" className={css.icon} hidden={true} />
-                </button>
-            )
+            clearButton.push(<button className={css.clear} key="clear" onClick={this.handleClear}>
+                <Icon symbol="close" className={css.icon} hidden />
+            </button>)
         }
 
         return (

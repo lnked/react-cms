@@ -61,7 +61,9 @@ export default class SelectionBox extends React.PureComponent<T, {}> {
             const group: any = []
 
             const { checked } = this.state
-            const { type, name, items, isMultiple } = this.props
+            const {
+                type, name, items, isMultiple
+            } = this.props
 
             let propType
             let propName
@@ -83,24 +85,22 @@ export default class SelectionBox extends React.PureComponent<T, {}> {
                     props.checked = false
                 }
 
-                group.push(
-                    <div key={id} className={`${css.item} ${css[`item_${type}`]}`}>
-                        <label className={css.label}>
-                            <input
-                                type={propType}
-                                name={propName}
-                                value={props.value}
-                                checked={props.checked}
-                                className={css.input}
-                                onChange={this.handleChange}
-                            />
+                group.push(<div key={id} className={`${css.item} ${css[`item_${type}`]}`}>
+                    <label className={css.label}>
+                        <input
+                            type={propType}
+                            name={propName}
+                            value={props.value}
+                            checked={props.checked}
+                            className={css.input}
+                            onChange={this.handleChange}
+                        />
 
-                            <span className={css.visible}>
-                                { props.label }
-                            </span>
-                        </label>
-                    </div>
-                )
+                        <span className={css.visible}>
+                            { props.label }
+                        </span>
+                    </label>
+                </div>)
             })
 
             return (

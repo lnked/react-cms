@@ -19,7 +19,9 @@ export default class Icon extends React.PureComponent<T, {}> {
 
     render () {
         const cn: any = []
-        const { symbol, hidden, children, className } = this.props
+        const {
+            symbol, hidden, children, className
+        } = this.props
 
         cn.push(css.icon)
 

@@ -18,13 +18,14 @@ export default class Sidebar extends React.Component<T, {}> {
 
         return (
             <nav className={css.sidebar}>
-                <Logo link={'/'} />
+                <Logo link="/" />
 
                 {pages.map((props: any, id: number) =>
-                    (<SidebarIcon key={id} {...props}
+                    (<SidebarIcon
+                        key={id}
+                        {...props}
                         link={`${base}/${props.system}`}
-                    />)
-                )}
+                    />))}
 
                 <SidebarIcon
                     key="site.settings"

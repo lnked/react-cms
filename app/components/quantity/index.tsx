@@ -58,7 +58,7 @@ export default class Quantity extends React.Component<T, S> {
         // this.props.handleChange(this.props.item, count)
     }
 
-    changeCount = (input) => () => {
+    changeCount = input => () => {
         const { count } = this.state
         const { min, max, step } = this.props
 
@@ -77,7 +77,9 @@ export default class Quantity extends React.Component<T, S> {
 
     render () {
         const { count } = this.state
-        const { min, max, name, type } = this.props
+        const {
+            min, max, name, type
+        } = this.props
 
         const decreaseClass = [css.control, css.decrease].join(' ')
         const increaseClass = [css.control, css.increase].join(' ')
