@@ -14,16 +14,18 @@ export default class GroupLinks extends React.Component<T, {}> {
         const { base, links } = this.props
 
         links.map((link: any) => {
-            list.push(<NavLink
-                key={link.slug}
-                to={`/${base}/${link.slug}`}
-                className={css.link}
-                activeClassName={css.active}
-            >
-                <span className={css.inline}>
-                    {link.name}
-                </span>
-            </NavLink>)
+            list.push(
+                <NavLink
+                    key={link.slug}
+                    to={`/${base}/${link.slug}`}
+                    className={css.link}
+                    activeClassName={css.active}
+                >
+                    <span className={css.inline}>
+                        {link.name}
+                    </span>
+                </NavLink>
+            )
         })
 
         return list

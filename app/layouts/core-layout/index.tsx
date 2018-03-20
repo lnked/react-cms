@@ -66,12 +66,14 @@ export default class CoreLayout extends React.Component<T, S> {
         if (links.length) {
             sbc.push(css.sidebar_long)
 
-            submenuBlock.push(<Aside title="Интернет магазин" key="submenu">
-                <GroupLinks
-                    base="shop"
-                    links={links}
-                />
-            </Aside>)
+            submenuBlock.push(
+                <Aside title="Интернет магазин" key="submenu">
+                    <GroupLinks
+                        base="shop"
+                        links={links}
+                    />
+                </Aside>
+            )
         }
 
         return (

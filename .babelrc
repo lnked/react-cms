@@ -51,7 +51,6 @@
             ]
         },
         "development": {
-            "presets": ["react-hmre"],
             "plugins": [
                 "react-hot-loader/babel",
                 "transform-react-display-name"

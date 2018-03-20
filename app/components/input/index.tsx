@@ -90,15 +90,19 @@ export default class Input extends React.Component<T, S> {
         const { hint, error } = this.props
 
         if (hint) {
-            addition.push(<span className={css.hint} key={[this.prefix, 'hint'].join('.')}>
-                {hint}
-            </span>)
+            addition.push(
+                <span className={css.hint} key={[this.prefix, 'hint'].join('.')}>
+                    {hint}
+                </span>
+            )
         }
 
         if (error) {
-            addition.push(<span className={css.error} key={[this.prefix, 'error'].join('.')}>
-                {error}
-            </span>)
+            addition.push(
+                <span className={css.error} key={[this.prefix, 'error'].join('.')}>
+                    {error}
+                </span>
+            )
         }
 
         return addition
