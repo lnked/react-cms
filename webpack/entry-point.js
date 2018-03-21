@@ -23,17 +23,18 @@ const entryPoint = Object.assign({}, {
     ]
 });
 
-if (define.rs_development) {
-    Object.assign(entryPoint, {
-        app: [
-            'react-hot-loader/patch',
-            resolve(define.rs_root, 'app')
-        ]
-    });
-} else {
-    Object.assign(entryPoint, {
-        app: resolve(define.rs_root, 'app')
-    });
-}
+Object.assign(entryPoint, {
+    app: [
+        ...define.rs_development ? [
+            // 'react-hot-loader/patch',
+            // 'webpack-dev-server/client?http://0.0.0.0:3000',
+            // 'webpack/hot/only-dev-server'
+            'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
+        ] : [],
+        resolve(define.rs_root, 'app')
+    ]
+});
+
+console.log('entryPoint: ', entryPoint)
 
 module.exports.config = entryPoint;

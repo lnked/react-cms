@@ -21,7 +21,7 @@ if (define.rs_analyzer)
 }
 else if (define.rs_development)
 {
-    sourceMap = 'inline-source-map';
+    sourceMap = 'cheap-module-eval-source-map';
 }
 
 process.traceDeprecation = true;
@@ -106,9 +106,11 @@ module.exports = {
 
     devServer: {
         headers: { 'Access-Control-Allow-Origin': '*' },
-        compress: define.rs_production,
+        open: true,
+        compress: false,
         contentBase: define.rs_dist,
-        watchContentBase: define.rs_development,
+        disableHostCheck: true,
+        watchContentBase: true,
         historyApiFallback: true,
         watchOptions: {
             aggregateTimeout: 100,
@@ -119,8 +121,8 @@ module.exports = {
             errors: true
         },
         stats: stats.config,
-        // hotOnly: define.rs_development,
-        hot: define.rs_development,
+        hotOnly: true,
+        hot: true,
         port: port,
         host: host
     }
