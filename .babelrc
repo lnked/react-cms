@@ -17,7 +17,6 @@
     "plugins": [
         "dual-import",
         "transform-imports",
-        "add-module-exports",
         "transform-react-jsx",
         ["babel-plugin-styled-components", {
             "minify": false,
@@ -36,18 +35,8 @@
         },
         "development": {
             "plugins": [
-                ["react-hot-loader/babel"],
-                ["transform-react-display-name"]
-                // ["react-transform", {
-                //     "transforms": [{
-                //         "transform": "react-transform-hmr",
-                //         "imports": ["react"],
-                //         "locals": ["module"]
-                //     }, {
-                //         "transform": "react-transform-catch-errors",
-                //         "imports": ["react", "redbox-react"]
-                //     }]
-                // }]
+                "react-hot-loader/babel",
+                "transform-react-display-name"
             ],
             "sourceMaps": true
         },

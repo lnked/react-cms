@@ -40,8 +40,8 @@ export default class Button extends React.PureComponent<T, {}> {
         } = this.props
 
         cn.push(css.button)
-        cn.push(css[`${size}`])
-        cn.push(css[`${variant}`])
+        cn.push(css[`size_${size}`])
+        cn.push(css[`variant_${variant}`])
 
         if (isIcon) {
             cn.push(css.icon)

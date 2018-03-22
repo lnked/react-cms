@@ -30,6 +30,7 @@ $core-sidebar-width: $aside-width + $sidebar-width;
 
 .body {
     width: calc(100% - #{$sidebar-width});
+    padding-top: $header-height + $header-request-height;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: calc(100% - #{$sidebar-width});
@@ -42,7 +43,7 @@ $core-sidebar-width: $aside-width + $sidebar-width;
 
 .header {
     height: $header-height;
-    position: relative;
+    position: absolute 0 0 auto;
     background-color: #fafafa;
 
     &:after {
@@ -57,7 +58,7 @@ $core-sidebar-width: $aside-width + $sidebar-width;
 }
 
 .content {
-    height: calc(100vh - #{$header-height});
+    height: calc(100vh - #{$header-height + $header-request-height});
     overflow-y: scroll;
     overflow-x: hidden;
     -moz-overflow-y: -moz-scrollbars-none;

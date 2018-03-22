@@ -47,16 +47,6 @@
     }
 }
 
-.pure,
-.link,
-.subtle-link {
-    &,
-    &:active {
-        box-shadow: none;
-        background-color: transparent;
-    }
-}
-
 .wide {
     width: 100%;
     height: 100%;
@@ -69,145 +59,160 @@
     border: 1px solid #0ff;
 }
 
-.small {
-    height: 28px;
-    font-size: 1.2rem;
-    line-height: 26px;
-
-    &:not(.icon) {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-}
-
-.normal {
-    height: 32px;
-    font-size: 1.3rem;
-    line-height: 30px;
-
-    &:not(.icon) {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-}
-
-.medium {
-    height: 38px;
-    font-size: 1.4rem;
-    line-height: 36px;
-
-    &:not(.icon) {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-}
-
-.large {
-    height: 44px;
-    font-size: 1.5rem;
-    line-height: 32px;
-
-    &:not(.icon) {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
-}
-
 .icon {
     padding-left: 7px;
     padding-right: 7px;
 }
 
-.link:not(:disabled) {
-    color: $c-button-link;
-    border: 0;
-    padding: 0;
-    line-height: 1;
-    background-color: transparent;
+.size {
+    &_small {
+        height: 28px;
+        font-size: 1.2rem;
+        line-height: 26px;
 
-    &:hover {
-        color: darken($c-button-link, $p-variations-percent);
+        &:not(.icon) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    &_normal {
+        height: 32px;
+        font-size: 1.3rem;
+        line-height: 30px;
+
+        &:not(.icon) {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+
+    &_medium {
+        height: 38px;
+        font-size: 1.4rem;
+        line-height: 36px;
+
+        &:not(.icon) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+
+    &_large {
+        height: 44px;
+        font-size: 1.5rem;
+        line-height: 32px;
+
+        &:not(.icon) {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
     }
 }
 
-.subtle-link:not(:disabled) {
-    color: $c-button-subtle-link;
-    border: 0;
-    padding: 0;
-    line-height: 1;
-    background-color: transparent;
-
-    &:hover {
-        color: darken($c-button-subtle-link, $p-variations-percent);
+.variant {
+    &_pure,
+    &_link,
+    &_subtle-link {
+        &,
+        &:active {
+            box-shadow: none;
+            background-color: transparent;
+        }
     }
-}
 
-.pure:not(:disabled) {
-    color: $c-normal-color;
-    border: 0;
-    background-color: transparent;
-
-    &:hover {
+    &_link:not(:disabled) {
+        color: $c-button-link;
+        border: 0;
+        padding: 0;
+        line-height: 1;
         background-color: transparent;
+
+        &:hover {
+            color: darken($c-button-link, $p-variations-percent);
+        }
     }
-}
 
-.normal:not(:disabled) {
-    color: $c-normal-color;
-    border-color: $c-normal-border;
-    background-color: $c-normal-background;
+    &_subtle-link:not(:disabled) {
+        color: $c-button-subtle-link;
+        border: 0;
+        padding: 0;
+        line-height: 1;
+        background-color: transparent;
 
-    &:hover {
-        background-color: $c-normal-background-hover;
+        &:hover {
+            color: darken($c-button-subtle-link, $p-variations-percent);
+        }
     }
-}
 
-.primary:not(:disabled) {
-    color: $c-primary-color;
-    border-color: $c-primary-border;
-    background-color: $c-primary-background;
+    &_pure:not(:disabled) {
+        color: $c-normal-color;
+        border: 0;
+        background-color: transparent;
 
-    &:hover {
-        background-color: $c-primary-background-hover;
+        &:hover {
+            background-color: transparent;
+        }
     }
-}
 
-.success:not(:disabled) {
-    color: $c-success-color;
-    border-color: $c-success-border;
-    background-color: $c-success-background;
+    &_normal:not(:disabled) {
+        color: $c-normal-color;
+        // border-color: $c-normal-border;
+        background-color: $c-normal-background;
+        border-color: $c-red;
 
-    &:hover {
-        background-color: darken($c-success-background, $p-variations-percent / 3);
+        &:hover {
+            background-color: $c-normal-background-hover;
+        }
     }
-}
 
-.info:not(:disabled) {
-    color: $c-info-color;
-    border-color: $c-info-border;
-    background-color: $c-info-background;
+    &_primary:not(:disabled) {
+        color: $c-primary-color;
+        border-color: $c-primary-border;
+        background-color: $c-primary-background;
 
-    &:hover {
-        background-color: darken($c-info-background, $p-variations-percent / 3);
+        &:hover {
+            background-color: $c-primary-background-hover;
+        }
     }
-}
 
-.warning:not(:disabled) {
-    color: $c-warning-color;
-    border-color: $c-warning-border;
-    background-color: $c-warning-background;
+    &_success:not(:disabled) {
+        color: $c-success-color;
+        border-color: $c-success-border;
+        background-color: $c-success-background;
 
-    &:hover {
-        background-color: darken($c-warning-background, $p-variations-percent / 3);
+        &:hover {
+            background-color: darken($c-success-background, $p-variations-percent / 3);
+        }
     }
-}
 
-.danger:not(:disabled) {
-    color: $c-danger-color;
-    border-color: $c-danger-border;
-    background-color: $c-danger-background;
+    &_info:not(:disabled) {
+        color: $c-info-color;
+        border-color: $c-info-border;
+        background-color: $c-info-background;
 
-    &:hover {
-        background-color: darken($c-danger-background, $p-variations-percent / 3);
+        &:hover {
+            background-color: darken($c-info-background, $p-variations-percent / 3);
+        }
+    }
+
+    &_warning:not(:disabled) {
+        color: $c-warning-color;
+        border-color: $c-warning-border;
+        background-color: $c-warning-background;
+
+        &:hover {
+            background-color: darken($c-warning-background, $p-variations-percent / 3);
+        }
+    }
+
+    &_danger:not(:disabled) {
+        color: $c-danger-color;
+        border-color: $c-danger-border;
+        background-color: $c-danger-background;
+
+        &:hover {
+            background-color: darken($c-danger-background, $p-variations-percent / 3);
+        }
     }
 }
