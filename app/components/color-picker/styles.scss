@@ -78,6 +78,7 @@
     text-align: center;
     color: $c-pink-swan;
     transition: color $a-time $a-func;
+    background: none;
 
     &:hover {
         color: $c-black;

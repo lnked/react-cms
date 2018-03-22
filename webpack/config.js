@@ -104,6 +104,7 @@ module.exports = {
     devServer: {
         headers: { 'Access-Control-Allow-Origin': '*' },
         open: true,
+        inline: true,
         compress: false,
         contentBase: define.rs_dist,
         disableHostCheck: true,
