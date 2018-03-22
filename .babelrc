@@ -19,10 +19,8 @@
         "transform-imports",
         "add-module-exports",
         "syntax-dynamic-import",
-        ["transform-class-properties", {
-            "spec": true
-        }],
         "transform-react-jsx",
+        "transform-class-properties",
         "transform-object-rest-spread",
         ["babel-plugin-styled-components", {
             "minify": false,
@@ -41,14 +39,8 @@
         },
         "development": {
             "plugins": [
-                "transform-react-display-name",
-                ["react-transform", {
-                    "transforms": [{
-                        "transform": "react-transform-hmr",
-                        "imports": ["react"],
-                        "locals": ["module"]
-                    }]
-                }]
+                "react-hot-loader/babel",
+                "transform-react-display-name"
             ],
             "sourceMaps": true
         },

@@ -8,16 +8,13 @@ const rules = require('./rules');
 const define = require('./define');
 const plugins = require('./plugins');
 
-const host = process.env.HOST || '0.0.0.0';
-const port = process.env.PORT || 3000;
-
 const entryPoint = require('./entry-point');
 
 let sourceMap = false;
 
 if (define.rs_analyzer)
 {
-    sourceMap = 'source-map';
+    sourceMap = 'none';
 }
 else if (define.rs_development)
 {
@@ -89,7 +86,7 @@ module.exports = {
 
     performance: define.rs_release && {
         hints: 'warning',
-        maxAssetSize: 400000,
+        maxAssetSize: 500000,
         maxEntrypointSize: 500000,
         assetFilter: (assetFilename) => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename))
     },
@@ -121,9 +118,9 @@ module.exports = {
             errors: true
         },
         stats: stats.config,
-        hotOnly: true,
+        // hotOnly: true,
         hot: true,
-        port: port,
-        host: host
+        port: define.rs_port,
+        host: define.rs_host
     }
 };

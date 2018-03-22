@@ -16,11 +16,11 @@ useConfig.push(
 );
 
 if (define.rs_development) {
-    // useConfig.push(
-    //     {
-    //         loader: 'react-hot-loader/webpack'
-    //     }
-    // )
+    useConfig.push(
+        {
+            loader: 'react-hot-loader/webpack'
+        }
+    )
 }
 
 useConfig.push(

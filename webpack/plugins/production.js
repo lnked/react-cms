@@ -20,6 +20,7 @@ const plugins = [
         fileName: "webpack-manifest.json"
     }),
     new WebpackChunkHash(),
+    new webpack.HashedModuleIdsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
         name: 'vendors',
         minChunks: (m) => {
@@ -39,7 +40,6 @@ const plugins = [
     new ChunkManifestPlugin({
         filename: 'chunk-manifest.json'
     }),
-    new webpack.HashedModuleIdsPlugin(),
     new ExtractCssChunks({
         filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',
         allChunks: true,

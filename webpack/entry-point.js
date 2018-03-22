@@ -25,16 +25,16 @@ const entryPoint = Object.assign({}, {
 
 Object.assign(entryPoint, {
     app: [
-        ...define.rs_development ? [
-            // 'react-hot-loader/patch',
-            // 'webpack-dev-server/client?http://0.0.0.0:3000',
-            // 'webpack/hot/only-dev-server'
-            'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
-        ] : [],
+        ...define.rs_development
+        ? [
+            'babel-polyfill',
+            'react-hot-loader/patch', // activate HMR for React
+            `webpack-dev-server/client?http://${define.rs_host}:${define.rs_port}`, // WebpackDevServer host and port
+            'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
+        ]
+        : [ /* */ ],
         resolve(define.rs_root, 'app')
     ]
 });
-
-console.log('entryPoint: ', entryPoint)
 
 module.exports.config = entryPoint;

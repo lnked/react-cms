@@ -1,22 +1,48 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-// interface T {
-//     variant: 'success' | 'amper' | 'red';
-//     children?: any;
-// }
+interface T {
+    step?: number;
+    minValue?: number;
+    maxValue?: number;
+}
 
-export default class Range extends React.PureComponent<{}, {}> {
-    // static defaultProps = {
-    //     variant: 'success',
-    //     children: ''
-    // }
+interface S {
+    value: number;
+}
+
+export default class Range extends React.PureComponent<T, S> {
+    static defaultProps = {
+        step: 1,
+        minValue: 0,
+        maxValue: 100
+    }
+
+    state = {
+        value: 0
+    }
+
+    handleChange = (e) => {
+        const value = parseInt(e.target.value, 10)
+
+        this.setState({ value })
+    }
 
     render () {
+        const { step, minValue, maxValue } = this.props
+        const { value } = this.state
+
         return (
             <div className={css.range}>
-                <input type="range" step="1" min="0" max="100" value="10" className={css.input} />
-                <input type="range" step="1" min="0" max="100" value="40" className={css.input} />
+                <input
+                    type="range"
+                    step={step}
+                    min={minValue}
+                    max={maxValue}
+                    value={value}
+                    className={css.input}
+                    onChange={this.handleChange}
+                />
             </div>
         )
     }
