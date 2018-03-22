@@ -6,6 +6,9 @@ import 'app.scss'
 
 import App from './routes'
 
+// const root = document.createElement('div')
+// document.body.appendChild(root)
+
 const renderApp = Component => {
     render(
         <AppContainer>

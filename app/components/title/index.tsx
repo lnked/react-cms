@@ -9,6 +9,18 @@ interface T {
     children: string | React.ReactChild | React.ReactNode | any[];
 }
 
+// export const LemonReset = ({ tag: Tag, children, className, tagRef, ...otherProps }: Props) => (
+//     <Tag className={classNames(styles\[\`lemon--${Tag}\`\], className)} ref={tagRef} {...otherProps}>
+//         {children}
+//     </Tag>
+// )
+
+// export const H1 = ({ children, className, ...otherProps }: TagProps) => (
+//     <LemonReset tag="h1" className={className} {...otherProps}>
+//         {children}
+//     </LemonReset>
+// )
+
 export default class Title extends React.Component<T, {}> {
     static defaultProps = {
         size: 'normal',
