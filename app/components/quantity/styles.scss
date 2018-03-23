@@ -23,11 +23,11 @@
     border-radius: 2px;
     background: none;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid;
+    border-color: #cdcdcd #c9c9c9 #e7e7e7 #d6d6d6;
+    box-shadow: inset 0 1px 1px #e8e8e8;
 
-    &:focus {
-        box-shadow: 0 0 0 2px rgba($c-focus-color, .75);
-    }
+    @include outline($c-focus-color);
 }
 
 .control {

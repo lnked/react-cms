@@ -1,0 +1,32 @@
+@import 'assets/styles/_global.scss';
+
+.address {
+    width: 100%;
+    position: relative;
+}
+
+.button {
+    width: 32px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0;
+    padding: 0;
+    border: 0;
+    line-height: 32px;
+    text-align: center;
+    background: none;
+}
+
+.icon {
+    width: 16px;
+    height: 17px;
+    color: #929292;
+    margin-top: -1px;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:hover {
+        color: #000;
+    }
+}

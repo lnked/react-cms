@@ -28,6 +28,7 @@ import SidebarIcon from 'components/sidebar-icon'
 import GroupLinks from 'components/group-links'
 // import SuggestInput from 'components/suggest-input'
 import SelectionBox from 'components/selection-box'
+import AddressInput from 'components/address-input'
 import PrimitiveInput from 'components/primitive-input'
 // import CustomComponent from 'components/custom-component'
 
@@ -60,6 +61,7 @@ export {
     // BreadCrumbs,
     GroupLinks,
     SidebarIcon,
+    AddressInput,
     SelectionBox,
     PrimitiveInput
     // SuggestInput,

@@ -24,6 +24,7 @@ import {
     Checkbox,
     SpeechText,
     ColorPicker,
+    AddressInput,
     SelectionBox
 } from 'components'
 
@@ -32,6 +33,13 @@ export default class Dashboard extends React.Component<{}, {}> {
         <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
             <Loader /><br /><br />
             <Spinner />
+        </div>
+    )
+
+    renderAddressInput = () => (
+        <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
+            <AddressInput /><br /><br />
+            <AddressInput />
         </div>
     )
 
@@ -313,6 +321,7 @@ export default class Dashboard extends React.Component<{}, {}> {
                     <div>
                         {this.renderLoader()}
                         {this.renderRange()}
+                        {this.renderAddressInput()}
                         {this.renderImportant()}
                         {this.renderQuantity()}
                         {this.renderInput()}
