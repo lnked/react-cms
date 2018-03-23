@@ -42,9 +42,13 @@ $core-sidebar-width: $aside-width + $sidebar-width;
 }
 
 .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: $header-height;
     position: absolute 0 0 auto;
     background-color: #fafafa;
+    padding-left: $sidebar-width + $content-padding;
 
     &:after {
         content: '';

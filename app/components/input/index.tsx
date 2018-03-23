@@ -162,7 +162,7 @@ export default class Input extends React.Component<T, S> {
         return (
             <label className={css.label} htmlFor={id}>
                 {multiline
-                    ? <textarea id={id} {...props} rows={multiline || 10}>{value}</textarea>
+                    ? <textarea id={id} {...props} defaultValue={value} rows={multiline || 10} />
                     : <input id={id} {...props} value={value} />
                 }
 

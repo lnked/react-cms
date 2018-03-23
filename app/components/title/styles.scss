@@ -1,15 +1,15 @@
 @import 'assets/styles/_global.scss';
 
 .title {
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1;
 
     &:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     &_size--normal {
-        font-size: 2.1rem;
+        font-size: 2rem;
 
         @media (max-width: $max-tablet) {
             font-size: 1.6rem;

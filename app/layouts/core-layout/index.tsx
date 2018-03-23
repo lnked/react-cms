@@ -8,7 +8,7 @@ import { SvgFixer } from 'utils'
 
 import { Aside, Navigation, RequestsPanel, Sidebar } from 'segments'
 
-import { GroupLinks } from 'components'
+import { Title, GroupLinks } from 'components'
 
 interface T {
     links?: any;
@@ -98,6 +98,9 @@ export default class CoreLayout extends React.Component<T, S> {
         return (
             <div className={scc.join(' ')}>
                 <header className={css.header}>
+                    <div>
+                        <Title label="Контакт" size="medium" />
+                    </div>
                     <Navigation />
                 </header>
 
