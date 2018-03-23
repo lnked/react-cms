@@ -4,6 +4,7 @@ export const loader: string;
 export const icon: string;
 export const size_small: string;
 export const sizeSmall: string;
+export const rounded: string;
 export const size_normal: string;
 export const sizeNormal: string;
 export const size_medium: string;

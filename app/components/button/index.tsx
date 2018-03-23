@@ -5,6 +5,7 @@ import * as css from './styles.scss'
 
 interface T {
     type?: string;
+    rounded?: boolean;
     size?: 'small' | 'large' | 'normal' | 'medium';
     label?: string;
     isIcon?: boolean;
@@ -20,6 +21,7 @@ export default class Button extends React.PureComponent<T, {}> {
         size: 'normal',
         type: 'button',
         variant: 'normal',
+        rounded: false,
         isIcon: false,
         isDisabled: false,
         handleClick: () => {
@@ -36,12 +38,16 @@ export default class Button extends React.PureComponent<T, {}> {
     render () {
         const cn: any = []
         const {
-            label, children, type, size, variant, isIcon, isDisabled, className
+            label, rounded, children, type, size, variant, isIcon, isDisabled, className
         } = this.props
 
         cn.push(css.button)
         cn.push(css[`size_${size}`])
         cn.push(css[`variant_${variant}`])
+
+        if (rounded) {
+            cn.push(css.rounded)
+        }
 
         if (isIcon) {
             cn.push(css.icon)

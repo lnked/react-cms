@@ -9,7 +9,7 @@ export default class RequestsPanel extends React.Component<{}, {}> {
             <div className={css.requests}>
                 <div>
                     <Button size="small" variant="info">Добавить контакт</Button>
-                    <Button size="small" variant="success">Сохранить</Button>
+                    <Button size="small" variant="success" rounded>Сохранить</Button>
                 </div>
 
                 <div className={css.right}>
