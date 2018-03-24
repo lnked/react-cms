@@ -23,9 +23,9 @@ declare var module: { hot: any }
 
 if (module.hot) {
     module.hot.accept()
-    module.hot.addStatusHandler(status => {
-        console.log('status: ', status)
-    })
+    // module.hot.addStatusHandler(status => {
+    //     console.log('status: ', status)
+    // })
     // module.hot.accept('./routes', () => { renderApp(App) })
     module.hot.dispose(() => {
         clearInterval(1000)

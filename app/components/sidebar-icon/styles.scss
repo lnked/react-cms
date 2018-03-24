@@ -106,8 +106,9 @@ circle {
     padding: 5px 12px 6px;
     border-radius: 0 2px 2px 0;
     white-space: nowrap;
+    pointer-events: none;
     transition: opacity .2s $a-func, transform .2s $a-func;
-    transform: translate3d(0, -50%, 0) scale(1.1);
+    transform: translate3d(0, -50%, 0);
     background-color: rgba($c-black, .8);
 
     &:before {
@@ -125,7 +126,7 @@ circle {
 
     .button:hover & {
         opacity: 1;
-        transform: translate3d(0, -50%, 0) scale(1);
+        transform: translate3d(0, -50%, 0);
     }
 }
 

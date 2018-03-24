@@ -9,10 +9,54 @@
     margin-bottom: 20px;
 }
 
+.search {
+    width: 300px;
+}
+
+.group {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.sort {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .table {
     width: 100%;
     table-layout: fixed;
     margin-bottom: 20px;
     border-collapse: collapse;
-    border: 1px solid $c-border;
+    border: 1px solid #c7c7c7;
+
+    th,
+    td {
+        font-size: 1.5rem;
+        padding: 6px 10px;
+        border: 1px solid #c7c7c7;
+    }
+
+    th {
+        color: #000;
+        font-weight: 600;
+        background-color: #dadada;
+    }
+
+    td {
+        font-weight: 400;
+    }
+
+    // <thead>
+    // <>
+    //     <th>Ключ</th>
+    //     <th>Переводы</th>
+    //     <th>Примеры</th>
+    //     <th>Группа</th>
+    // </tr>
+    // </thead>
 }
