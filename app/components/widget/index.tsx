@@ -12,7 +12,7 @@ export default class Widget extends React.PureComponent<T, {}> {
         const cn: any = []
         const { title, children, className } = this.props
 
-        cn.push(css.widget)
+        cn.push(css.wrapper)
 
         if (className) {
             cn.push(className)

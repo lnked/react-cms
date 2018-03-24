@@ -1,6 +1,8 @@
 @import 'assets/styles/_global.scss';
 
 .group {
+    display: inline-block;
+
     &_normal &__item {
         clear: both;
         margin-bottom: 15px;

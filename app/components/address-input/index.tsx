@@ -38,7 +38,7 @@ export default class AddressInput extends React.Component<T, S> {
         // const { count } = this.state
 
         return (
-            <div className={css.address}>
+            <div className={css.wrapper}>
                 <Input
                     type="text"
                     name={name}
