@@ -1,0 +1,21 @@
+@import 'assets/styles/_global.scss';
+
+.copy {
+    color: $c-link;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    padding: 0 15px 0 0;
+    font-size: 1.4rem;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: baseline;
+    background: url(components/copied/assets/clippy.svg) no-repeat 100% 50%;
+    background-size: 11px 12px;
+}
+
+.target {
+    display: inline-block;
+    border-bottom: 1px dotted $c-link;
+}

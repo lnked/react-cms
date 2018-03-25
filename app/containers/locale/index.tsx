@@ -1,13 +1,12 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { Checkbox, Button, Select } from 'components'
+import { Checkbox, Copied, Badge, Button, Select } from 'components'
 
 import { Content, Search } from 'segments'
 
 // import { Table, Cell, Header, Footer } from 'components/table'
 // import { Table, Cell, Header, Footer } from '../../components/table'
-
 // console.log(Table, Cell, Header, Footer)
 
 export default class Locale extends React.Component<{}, {}> {
@@ -38,6 +37,7 @@ export default class Locale extends React.Component<{}, {}> {
                             name="sort"
                             value={1}
                             autosize={false}
+                            clearable={false}
                             onChange={this.handleChange}
                             options={[
                                 { value: '1', label: 'По новизне' },
@@ -71,19 +71,27 @@ export default class Locale extends React.Component<{}, {}> {
                                 <td>
                                     <Checkbox name="item[1]" size="small" />
                                 </td>
-                                <td>buttons.save</td>
-                                <td>Sicherheit<br />Save<br />Сохранить</td>
+                                <td><Copied target="buttons.save" /></td>
+                                <td>
+                                    <Copied target="Sicherheit" /><br />
+                                    <Copied target="SicheSaverheit" /><br />
+                                    <Copied target="Сохранить" />
+                                </td>
                                 <td>key php twig smarty text</td>
-                                <td>Системный</td>
+                                <td><Badge title="Системный" /></td>
                             </tr>
                             <tr>
                                 <td>
                                     <Checkbox name="item[1]" size="small" />
                                 </td>
-                                <td>buttons.save</td>
-                                <td>Sicherheit<br />Save<br />Сохранить</td>
+                                <td><Copied target="buttons.save" /></td>
+                                <td>
+                                    <Copied target="Sicherheit" /><br />
+                                    <Copied target="SicheSaverheit" /><br />
+                                    <Copied target="Сохранить" />
+                                </td>
                                 <td>key php twig smarty text</td>
-                                <td>Системный</td>
+                                <td><Badge title="Системный" /></td>
                             </tr>
                         </tbody>
                     </table>

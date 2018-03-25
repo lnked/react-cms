@@ -15,6 +15,7 @@ import {
     Switch,
     Loader,
     Widget,
+    Copied,
     Button,
     Spinner,
     Sandwich,
@@ -33,6 +34,14 @@ export default class Dashboard extends React.Component<{}, {}> {
         <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
             <Loader /><br /><br />
             <Spinner />
+        </div>
+    )
+
+    renderCopied = () => (
+        <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
+            <Copied target="Lorem Ipsum" /><br /><br />
+            <Copied target="Lorem Ipsum Dolar And so so so">Скопировать длинный текст</Copied><br /><br />
+            <Copied>Copy to clipboard</Copied>
         </div>
     )
 
@@ -319,6 +328,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
                 <Widget title="Использовано свободного места">
                     <div>
+                        {this.renderCopied()}
                         {this.renderLoader()}
                         {this.renderRange()}
                         {this.renderAddressInput()}

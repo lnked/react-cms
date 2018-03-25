@@ -7,6 +7,7 @@ import Range from 'components/range'
 import Title from 'components/title'
 import Badge from 'components/badge'
 import Select from 'components/select'
+import Copied from 'components/copied'
 // import Layout from 'components/layout'
 import Button from 'components/button'
 import Switch from 'components/switch'
@@ -44,6 +45,7 @@ export {
     Badge,
     Switch,
     // Layout,
+    Copied,
     Button,
     Notify,
     Widget,
