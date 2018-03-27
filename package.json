@@ -249,6 +249,7 @@
         "webpack-pwa-manifest": "3.6.2",
         "webpack-svgstore-plugin": "4.0.1",
         "webpack-visualizer-plugin": "0.1.11",
-        "xml-loader": "1.2.1"
+        "xml-loader": "1.2.1",
+        "zopfli-webpack-plugin": "0.1.0"
     }
 }
