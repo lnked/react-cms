@@ -205,7 +205,7 @@
         "prettier-eslint": "8.8.1",
         "prop-types": "15.6.1",
         "pug": "2.0.3",
-        "pug-loader": "2.3.0",
+        "pug-loader": "2.4.0",
         "purgecss-webpack-plugin": "0.22.0",
         "raw-loader": "0.5.1",
         "react-dev-utils": "4.2.1",
