@@ -16,6 +16,7 @@
 /app/settings/
 /features.md
 /fastest/vendors/
+/app/variables/index.js
 
 # Numerous always-ignore extensions
 *.bak
