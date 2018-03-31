@@ -114,6 +114,16 @@
         box-shadow: 0 0 0 1000px #fff inset;
     }
 
+    &:read-only {
+        opacity: .8;
+        cursor: default;
+        border-color: #e8e8e8;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
     &:disabled {
         opacity: .4;
         cursor: default;

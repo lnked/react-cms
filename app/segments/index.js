@@ -1,6 +1,7 @@
 import Aside from 'segments/aside'
 import Search from 'segments/search'
 import Dialog from 'segments/dialog'
+import System from 'segments/system'
 import Layout from 'segments/layout'
 import Sidebar from 'segments/sidebar'
 import Content from 'segments/content'
@@ -12,6 +13,7 @@ export {
     Search,
     Dialog,
     Layout,
+    System,
     Sidebar,
     Content,
     Navigation,

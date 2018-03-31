@@ -123,7 +123,8 @@
         ]
     },
     "files": [
-        "./typings/json.d.ts"
+        "./typings/json.d.ts",
+        "./typings/react.d.ts"
     ],
     "filesGlob": [
         "./app/**/*.ts",

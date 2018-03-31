@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import {
+    System,
     Dialog,
     Content
 } from 'segments'
@@ -30,6 +31,13 @@ import {
 } from 'components'
 
 export default class Dashboard extends React.Component<{}, {}> {
+    renderSystem = () => (
+        <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
+            <System /><br /><br />
+            <System />
+        </div>
+    )
+
     renderLoader = () => (
         <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
             <Loader /><br /><br />
@@ -328,6 +336,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
                 <Widget title="Использовано свободного места">
                     <div>
+                        {this.renderSystem()}
                         {this.renderCopied()}
                         {this.renderLoader()}
                         {this.renderRange()}

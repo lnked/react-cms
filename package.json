@@ -95,6 +95,7 @@
         "redux-connect": "7.0.0",
         "redux-thunk": "2.2.0",
         "reset-css": "2.2.1",
+        "transliteration": "1.6.2",
         "typescript-plugin-lodash": "0.1.0",
         "xregexp": "3.2.0"
     },

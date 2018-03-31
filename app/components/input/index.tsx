@@ -13,6 +13,7 @@ interface T {
     error?: string | boolean;
     cleaned?: boolean;
     required?: boolean;
+    readOnly?: boolean;
     className?: string | boolean;
     placeholder?: string;
     autoReseze?: boolean;
@@ -36,6 +37,7 @@ export default class Input extends React.Component<T, S> {
         children: '',
         focus: false,
         cleaned: false,
+        readOnly: false,
         required: false,
         tabindex: false,
         maxlength: false,
@@ -114,7 +116,7 @@ export default class Input extends React.Component<T, S> {
 
         const { value } = this.state
         const {
-            name, error, cleaned, required, multiline, maxlength, placeholder, tabindex, className
+            name, error, cleaned, required, multiline, maxlength, placeholder, tabindex, className, readOnly
         } = this.props
 
         const id = `input_${name}`
@@ -139,6 +141,7 @@ export default class Input extends React.Component<T, S> {
             props.required = required
         }
 
+        props.readOnly = readOnly
         props.spellCheck = false
         props.autoCorrect = 'off'
         props.autoComplete = 'off'

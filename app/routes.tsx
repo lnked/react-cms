@@ -128,40 +128,38 @@ export default class App extends React.Component<{}, S> {
 
     render () {
         const { links } = this.state
-
+        // <React.StrictMode>
         return (
             <Router>
-                <React.StrictMode>
-                    <CoreLayout links={links}>
-                        <Switch>
+                <CoreLayout links={links}>
+                    <Switch>
 
-                            {routes.map(({ component: Component, ...rest }: any, key) => (
-                                <Route
-                                    {...rest}
-                                    key={key}
-                                    render={(props: any) => {
-                                        if (rest.path !== this.state.pathname) {
-                                            if (rest.path) {
-                                                console.log('render ', rest.path)
-                                            // this.handleChangePath(rest.path)
-                                            }
-
-                                            return (
-                                                <Transition timeout={1000}>
-                                                    {status => (
-                                                        <Component {...props} className={`fade fade-${status}`} />
-                                                    )}
-                                                </Transition>
-                                            )
+                        {routes.map(({ component: Component, ...rest }: any, key) => (
+                            <Route
+                                {...rest}
+                                key={key}
+                                render={(props: any) => {
+                                    if (rest.path !== this.state.pathname) {
+                                        if (rest.path) {
+                                            console.log('render ', rest.path)
+                                        // this.handleChangePath(rest.path)
                                         }
 
-                                        return ''
-                                    }} />
-                            ))}
+                                        return (
+                                            <Transition timeout={1000}>
+                                                {status => (
+                                                    <Component {...props} className={`fade fade-${status}`} />
+                                                )}
+                                            </Transition>
+                                        )
+                                    }
 
-                        </Switch>
-                    </CoreLayout>
-                </React.StrictMode>
+                                    return ''
+                                }} />
+                        ))}
+
+                    </Switch>
+                </CoreLayout>
             </Router>
         )
     }
