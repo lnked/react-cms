@@ -1,2 +1,12 @@
 @import 'assets/styles/_variable.scss';
 @import 'assets/styles/_mixins.scss';
+
+@custom-media --phone-medium (width >= 375px);
+@custom-media --phone-big (width >= 480px);
+@custom-media --tablet (width > 640px);
+@custom-media --tablet-middle (width >= 768px);
+@custom-media --tablet-big (width >= 860px);
+@custom-media --desktop (width >= 980px);
+@custom-media --desktop-middle (width >= 1280px);
+@custom-media --desktop-large (width >= 1400px);
+@custom-media --portrait (orientation: portrait);
