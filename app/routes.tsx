@@ -3,7 +3,7 @@ import * as React from 'react'
 
 import {
     BrowserRouter as Router,
-    // Redirect,
+    Redirect,
     Route,
     Switch
 } from 'react-router-dom'
@@ -36,6 +36,7 @@ interface S {
     pages: any;
     pathname: string;
     isOverflow: boolean;
+    redirectToPreviousRoute: boolean;
 }
 
 const routes: any = [
@@ -89,50 +90,74 @@ const routes: any = [
     }
 ]
 
+const AuthService = {
+    isAuthenticated: false,
+    authenticate(cb) {
+        this.isAuthenticated = true
+        setTimeout(cb, 100)
+    },
+    logout(cb) {
+        this.isAuthenticated = false
+        setTimeout(cb, 100)
+    }
+}
+
+const SecretRoute = ({ component: Component, ...rest }) => (
+    <Route {...rest} render={(props) => (
+        AuthService.isAuthenticated === true
+            ? <Component {...props} />
+            : <Redirect to={{
+                pathname: '/login',
+                state: { from: props.location }
+            }} />
+    )} />
+)
+
+// <AuthStatus />
+// const AuthStatus = withRouter(({ history }) => (
+//     AuthService.isAuthenticated ? (
+//       <p>
+//         Welcome! <button onClick={() => {
+//           AuthService.logout(() => history.push('/'))
+//         }}>Sign out</button>
+//       </p>
+//     ) : (
+//       <p>You are not logged in.</p>
+//     )
+// ))
+
 export default class App extends React.Component<{}, S> {
     state = {
         links: [],
         pages: [],
         pathname: '',
-        isOverflow: false
+        isOverflow: false,
+        redirectToPreviousRoute: false
     }
 
-    componentDidMount () {
-        // const path = location.pathname.split('/')
-
-        // if (typeof (path[1]) !== 'undefined') {
-        //     this.handleChangePath(path[1], location.pathname)
-        // }
-    }
-
-    handleChangePath = (page: string, pathname: string) => {
-        console.log(page, pathname)
-
-        // if (pathname !== this.state.pathname) {
-        //     axios
-        //         .get(`/api/${page}`)
-        //         .then((response) => {
-        //             if (typeof (response.data.json) !== 'undefined') {
-        //                 this.setState({ ...this.state, links: response.data, pathname })
-        //             }
-        //         })
-        //         .catch((err) => {
-        //             console.log('err: ', err)
-        //         })
-        // } else {
-        //     this.setState({ ...this.state, links: [] })
-        // }
-
-        return ''
+    login = () => {
+        AuthService.authenticate(() => {
+            this.setState({ redirectToPreviousRoute: true })
+        })
     }
 
     render () {
         const { links } = this.state
-        // <React.StrictMode>
+
+        // const { from } = this.props.location.state || { from: { pathname: "/" } };
+        // const { redirectToPreviousRoute } = this.state;
+
+        // if (redirectToPreviousRoute) {
+        //     return <Redirect to={from} />
+        // }
+
+        // <button onClick={this.login}>Log in</button>
+
         return (
             <Router>
                 <CoreLayout links={links}>
                     <Switch>
+                        <SecretRoute path="/private" component={Auth} />
 
                         {routes.map(({ component: Component, ...rest }: any, key) => (
                             <Route

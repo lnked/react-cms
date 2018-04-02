@@ -5,21 +5,12 @@ import { slugify } from 'transliteration'
 
 import { Input, Icon } from 'components'
 
-// interface T {
-//     name: string;
-//     symbol: string;
-//     placeholder?: string;
-// }
-
 interface S {
     value: string;
     system: string;
 }
 
 export default class System extends React.Component<{}, S> {
-    // static defaultProps = {
-    //     placeholder: ''
-    // }
     state = {
         value: '',
         system: ''
