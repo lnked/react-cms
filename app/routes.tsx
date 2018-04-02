@@ -92,16 +92,17 @@ const routes: any = [
 
 const AuthService = {
     isAuthenticated: false,
-    authenticate(cb) {
+    authenticate (cb) {
         this.isAuthenticated = true
         setTimeout(cb, 100)
     },
-    logout(cb) {
+    logout (cb) {
         this.isAuthenticated = false
         setTimeout(cb, 100)
     }
 }
 
+// @ts-ignore
 const SecretRoute = ({ component: Component, ...rest }) => (
     <Route {...rest} render={(props) => (
         AuthService.isAuthenticated === true
@@ -142,49 +143,51 @@ export default class App extends React.Component<{}, S> {
     }
 
     render () {
-        const { links } = this.state
+        const { links, redirectToPreviousRoute } = this.state
 
-        // const { from } = this.props.location.state || { from: { pathname: "/" } };
-        // const { redirectToPreviousRoute } = this.state;
+        // const { from } = this.props.location.state || { from: { pathname: '/' } }
+        const { from } = { from: { pathname: '/' } }
 
-        // if (redirectToPreviousRoute) {
-        //     return <Redirect to={from} />
-        // }
+        if (redirectToPreviousRoute) {
+            return <Redirect to={from} />
+        }
 
         // <button onClick={this.login}>Log in</button>
 
         return (
             <Router>
-                <CoreLayout links={links}>
-                    <Switch>
-                        <SecretRoute path="/private" component={Auth} />
+                <React.StrictMode>
+                    <CoreLayout links={links}>
+                        <Switch>
+                            <SecretRoute path="/private" component={Auth} />
 
-                        {routes.map(({ component: Component, ...rest }: any, key) => (
-                            <Route
-                                {...rest}
-                                key={key}
-                                render={(props: any) => {
-                                    if (rest.path !== this.state.pathname) {
-                                        if (rest.path) {
-                                            console.log('render ', rest.path)
-                                        // this.handleChangePath(rest.path)
+                            {routes.map(({ component: Component, ...rest }: any, key) => (
+                                <Route
+                                    {...rest}
+                                    key={key}
+                                    render={(props: any) => {
+                                        if (rest.path !== this.state.pathname) {
+                                            if (rest.path) {
+                                                console.log('render ', rest.path)
+                                            // this.handleChangePath(rest.path)
+                                            }
+
+                                            return (
+                                                <Transition timeout={1000}>
+                                                    {status => (
+                                                        <Component {...props} className={`fade fade-${status}`} />
+                                                    )}
+                                                </Transition>
+                                            )
                                         }
 
-                                        return (
-                                            <Transition timeout={1000}>
-                                                {status => (
-                                                    <Component {...props} className={`fade fade-${status}`} />
-                                                )}
-                                            </Transition>
-                                        )
-                                    }
+                                        return ''
+                                    }} />
+                            ))}
 
-                                    return ''
-                                }} />
-                        ))}
-
-                    </Switch>
-                </CoreLayout>
+                        </Switch>
+                    </CoreLayout>
+                </React.StrictMode>
             </Router>
         )
     }
