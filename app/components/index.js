@@ -17,6 +17,7 @@ import Loader from 'components/loader'
 import Spinner from 'components/spinner'
 import Sandwich from 'components/sandwich'
 import Quantity from 'components/quantity'
+import Dropzone from 'components/dropzone'
 import Checkbox from 'components/checkbox'
 import SpeechText from 'components/speech-text'
 import Important from 'components/important'
@@ -53,6 +54,7 @@ export {
     Select,
     Spinner,
     Sandwich,
+    Dropzone,
     Quantity,
     Checkbox,
     Important,

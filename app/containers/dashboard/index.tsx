@@ -20,6 +20,7 @@ import {
     Button,
     Spinner,
     Sandwich,
+    Dropzone,
     Quantity,
     // Truncate,
     Important,
@@ -31,6 +32,13 @@ import {
 } from 'components'
 
 export default class Dashboard extends React.Component<{}, {}> {
+    renderDropzone = () => (
+        <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
+            <Dropzone /><br /><br />
+            <Dropzone />
+        </div>
+    )
+
     renderSystem = () => (
         <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
             <System /><br /><br />
@@ -337,6 +345,7 @@ export default class Dashboard extends React.Component<{}, {}> {
                 <Widget title="Использовано свободного места">
                     <div>
                         {this.renderSystem()}
+                        {this.renderDropzone()}
                         {this.renderCopied()}
                         {this.renderLoader()}
                         {this.renderRange()}
