@@ -11,6 +11,7 @@
         "prestart": "yarn run svgstore",
         "prebuild": "yarn run svgstore",
         "postrelease": "yarn run size",
+        "pretest": "eslint ./app && eslint test",
         "prerelease": "yarn run svgstore",
         "build": "yarn run clean && webpack --config ./webpack/config.js --env assemply",
         "release": "yarn run clean && webpack --config ./webpack/config.js --env release",
@@ -23,7 +24,8 @@
         "lint:styles": "stylelint 'src/**/*.{css,less,scss,sss}'",
         "lint:fix": "eslint ./app --fix .js[x]",
         "lint": "yarn run lint:scripts && yarn run lint:styles",
-        "test": "",
+        "test": "jest",
+        "test:watch": "jest --watch --env test",
         "size": "npx size-limit",
         "serve": "firebase serve",
         "deploy": "yarn run clean && webpack --config ./webpack/config.js --env deploy && gh-pages -d ./dist",
@@ -46,26 +48,6 @@
     ],
     "config": {
         "port": "3000"
-    },
-    "jest": {
-        "globals": {
-            "ts-jest": {
-                "useBabelrc": true,
-                "enableTsDiagnostics": true
-            }
-        },
-        "transform": {
-            "^.+\\.tsx?$": "ts-jest"
-        },
-        "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-        "moduleFileExtensions": [
-            "ts",
-            "tsx",
-            "js",
-            "jsx",
-            "json",
-            "node"
-        ]
     },
     "dependencies": {
         "auth0-js": "9.4.2",
@@ -224,6 +206,7 @@
         "raw-loader": "0.5.1",
         "react-dev-utils": "4.2.1",
         "react-hot-loader": "3.1.3",
+        "react-test-renderer": "16.3.0",
         "redux-devtools": "3.4.1",
         "redux-logger": "3.0.6",
         "redux-mock-store": "1.5.1",

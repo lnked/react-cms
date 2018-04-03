@@ -170,13 +170,7 @@ export default class App extends React.Component<{}, S> {
                                         // this.handleChangePath(rest.path)
                                         }
 
-                                        return (
-                                            <Transition timeout={1000}>
-                                                {status => (
-                                                    <Component {...props} className={`fade fade-${status}`} />
-                                                )}
-                                            </Transition>
-                                        )
+                                        return status => ( <Component {...props} className={`fade fade-${status}`} /> )
                                     }
 
                                     return ''
