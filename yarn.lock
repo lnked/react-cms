@@ -395,9 +395,9 @@
   version "16.0.38"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.38.tgz#76617433ea10274505f60bb86eddfdd0476ffdc2"
 
-"@types/react@16.3.1":
-  version "16.3.1"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.1.tgz#6f6aaffaf7dba502ff5ca15e4aa18caee9b04995"
+"@types/react@16.3.2":
+  version "16.3.2"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.2.tgz#8dd45796b33160c60ddf1de068f45729214668bb"
 
 "@types/redux-mock-store@0.0.13":
   version "0.0.13"
@@ -500,13 +500,14 @@
     "@types/uglify-js" "*"
     source-map "^0.6.0"
 
-"@types/webpack@^3.0.5":
-  version "3.8.1"
-  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-3.8.1.tgz#20c11ea43f1ea7bb09eee4d6d633d830653e5a55"
+"@types/webpack@^3.0.0 || ^4.0.0":
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.1.3.tgz#1cbb3fceb275590b63addf7cfb1534fda7e645a1"
   dependencies:
     "@types/node" "*"
     "@types/tapable" "*"
     "@types/uglify-js" "*"
+    source-map "^0.6.0"
 
 "@types/webspeechapi@0.0.29":
   version "0.0.29"
@@ -2608,9 +2609,9 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   version "1.0.30000782"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000782.tgz#d8815bce1578c350aced1132507301205e0fab53"
 
-caniuse-lite@1.0.30000821:
-  version "1.0.30000821"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000821.tgz#0f3223f1e048ed96451c56ca6cf197058c42cb93"
+caniuse-lite@1.0.30000823:
+  version "1.0.30000823"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000823.tgz#b79842a5b5a48eaa416b73f5a5d7a23f52d26014"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000780:
   version "1.0.30000782"
@@ -5021,9 +5022,9 @@ fastparse@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/fastparse/-/fastparse-1.1.1.tgz#d1e2643b38a94d7583b479060e6c4affc94071f8"
 
-favicons-webpack-plugin@0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/favicons-webpack-plugin/-/favicons-webpack-plugin-0.0.8.tgz#5dee574b7a989ede4c6cdb872f2acd4172c349d9"
+favicons-webpack-plugin@0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/favicons-webpack-plugin/-/favicons-webpack-plugin-0.0.9.tgz#df63e80c556b804e4925ec8e05bee36391573dc9"
   dependencies:
     favicons "^4.8.3"
     loader-utils "^0.2.14"
@@ -13747,11 +13748,11 @@ webpack-bundle-size-analyzer@2.7.0:
     filesize "^3.1.2"
     humanize "0.0.9"
 
-webpack-chunk-hash@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/webpack-chunk-hash/-/webpack-chunk-hash-0.5.0.tgz#1dba38203d73c1e6ab069b6810a5a37402399dec"
+webpack-chunk-hash@0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/webpack-chunk-hash/-/webpack-chunk-hash-0.6.0.tgz#eca36aff76e327d08a18a3e7990eb46e68376818"
   dependencies:
-    "@types/webpack" "^3.0.5"
+    "@types/webpack" "^3.0.0 || ^4.0.0"
 
 webpack-defaults@^1.5.0:
   version "1.6.0"
