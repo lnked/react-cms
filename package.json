@@ -68,6 +68,7 @@
         ]
     },
     "dependencies": {
+        "auth0-js": "9.4.2",
         "axios": "0.18.0",
         "babel-polyfill": "6.26.0",
         "core-js": "2.5.4",
