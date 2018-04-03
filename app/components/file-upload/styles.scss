@@ -1,0 +1,103 @@
+@import 'assets/styles/_global.scss';
+
+.dropzone {
+    $p: &;
+    width: 100%;
+    color: $c-green;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    transition: border-color $a-micro-time $a-func, color $a-micro-time $a-func;
+
+    @media (max-width: 414px) {
+        justify-content: flex-start;
+    }
+
+    &:after,
+    &:before {
+        width: 100%;
+        height: 1px;
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(to right, $c-green 60%, $c-white 0%);
+        background-position: bottom;
+        background-repeat: repeat-x;
+        background-size: 12px 1px;
+        transition: all $a-micro-time $a-func;
+    }
+
+    &:after {
+        top: 0;
+    }
+
+    &:before {
+        bottom: 0;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+        color: $c-green;
+
+        &:after,
+        &:before {
+            background-image: linear-gradient(to right, $c-green 60%, $c-white 0%);
+        }
+    }
+
+    &__content {
+        width: 100%;
+        height: 100%;
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        @media (max-width: 414px) {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+        }
+
+        &:after,
+        &:before {
+            width: 1px;
+            height: 100%;
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background-image: linear-gradient($c-green 60%, $c-white 0%);
+            background-position: right;
+            background-size: 1px 12px;
+            background-repeat: repeat-y;
+            transition: all $a-micro-time $a-func;
+        }
+
+        &:after {
+            left: 0;
+        }
+
+        &:before {
+            right: 0;
+        }
+
+        #{$p}[disabled] &:after,
+        #{$p}[disabled] &:before {
+            background-image: linear-gradient(#d5d5d5 60%, $c-white 0%);
+        }
+
+        #{$p}:hover &:after,
+        #{$p}:hover &:before {
+            background-image: linear-gradient($c-green 60%, $c-white 0%);
+        }
+    }
+}

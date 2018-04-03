@@ -20,12 +20,12 @@ import {
     Button,
     Spinner,
     Sandwich,
-    Dropzone,
     Quantity,
     // Truncate,
     Important,
     Checkbox,
     SpeechText,
+    FileUpload,
     ColorPicker,
     AddressInput,
     SelectionBox
@@ -34,8 +34,8 @@ import {
 export default class Dashboard extends React.Component<{}, {}> {
     renderDropzone = () => (
         <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
-            <Dropzone /><br /><br />
-            <Dropzone />
+            <FileUpload /><br /><br />
+            <FileUpload />
         </div>
     )
 

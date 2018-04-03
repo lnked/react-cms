@@ -17,7 +17,7 @@ import Loader from 'components/loader'
 import Spinner from 'components/spinner'
 import Sandwich from 'components/sandwich'
 import Quantity from 'components/quantity'
-import Dropzone from 'components/dropzone'
+import FileUpload from 'components/file-upload'
 import Checkbox from 'components/checkbox'
 import SpeechText from 'components/speech-text'
 import Important from 'components/important'
@@ -54,7 +54,7 @@ export {
     Select,
     Spinner,
     Sandwich,
-    Dropzone,
+    FileUpload,
     Quantity,
     Checkbox,
     Important,

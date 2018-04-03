@@ -16,11 +16,8 @@ export default class PureLayout extends React.Component<T, S> {
         title: 'React Starter App'
     }
 
-    componentWillMount () {
-        document.title = this.state.title
-    }
-
     componentDidMount () {
+        document.title = this.state.title
         SvgFixer()
     }
 

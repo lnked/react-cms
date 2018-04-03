@@ -16,11 +16,8 @@ export default class AuthLayout extends React.Component<T, S> {
         title: 'Auth :: React Starter App'
     }
 
-    componentWillMount () {
-        document.title = this.state.title
-    }
-
     componentDidMount () {
+        document.title = this.state.title
         SvgFixer()
     }
 

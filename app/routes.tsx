@@ -90,29 +90,29 @@ const routes: any = [
     }
 ]
 
-const AuthService = {
-    isAuthenticated: false,
-    authenticate (cb) {
-        this.isAuthenticated = true
-        setTimeout(cb, 100)
-    },
-    logout (cb) {
-        this.isAuthenticated = false
-        setTimeout(cb, 100)
-    }
-}
+// const AuthService = {
+//     isAuthenticated: false,
+//     authenticate (cb) {
+//         this.isAuthenticated = true
+//         setTimeout(cb, 100)
+//     },
+//     logout (cb) {
+//         this.isAuthenticated = false
+//         setTimeout(cb, 100)
+//     }
+// }
 
-// @ts-ignore
-const SecretRoute = ({ component: Component, ...rest }) => (
-    <Route {...rest} render={(props) => (
-        AuthService.isAuthenticated === true
-            ? <Component {...props} />
-            : <Redirect to={{
-                pathname: '/login',
-                state: { from: props.location }
-            }} />
-    )} />
-)
+// // @ts-ignore
+// const SecretRoute = ({ component: Component, ...rest }) => (
+//     <Route {...rest} render={(props) => (
+//         AuthService.isAuthenticated === true
+//             ? <Component {...props} />
+//             : <Redirect to={{
+//                 pathname: '/login',
+//                 state: { from: props.location }
+//             }} />
+//     )} />
+// )
 
 // <AuthStatus />
 // const AuthStatus = withRouter(({ history }) => (
@@ -136,11 +136,11 @@ export default class App extends React.Component<{}, S> {
         redirectToPreviousRoute: false
     }
 
-    login = () => {
-        AuthService.authenticate(() => {
-            this.setState({ redirectToPreviousRoute: true })
-        })
-    }
+    // login = () => {
+    //     AuthService.authenticate(() => {
+    //         this.setState({ redirectToPreviousRoute: true })
+    //     })
+    // }
 
     render () {
         const { links, redirectToPreviousRoute } = this.state
@@ -153,41 +153,38 @@ export default class App extends React.Component<{}, S> {
         }
 
         // <button onClick={this.login}>Log in</button>
+        // <SecretRoute path="/private" component={Auth} />
 
         return (
             <Router>
-                <React.StrictMode>
-                    <CoreLayout links={links}>
-                        <Switch>
-                            <SecretRoute path="/private" component={Auth} />
-
-                            {routes.map(({ component: Component, ...rest }: any, key) => (
-                                <Route
-                                    {...rest}
-                                    key={key}
-                                    render={(props: any) => {
-                                        if (rest.path !== this.state.pathname) {
-                                            if (rest.path) {
-                                                console.log('render ', rest.path)
-                                            // this.handleChangePath(rest.path)
-                                            }
-
-                                            return (
-                                                <Transition timeout={1000}>
-                                                    {status => (
-                                                        <Component {...props} className={`fade fade-${status}`} />
-                                                    )}
-                                                </Transition>
-                                            )
+                <CoreLayout links={links}>
+                    <Switch>
+                        {routes.map(({ component: Component, ...rest }: any, key) => (
+                            <Route
+                                {...rest}
+                                key={key}
+                                render={(props: any) => {
+                                    if (rest.path !== this.state.pathname) {
+                                        if (rest.path) {
+                                            console.log('render ', rest.path)
+                                        // this.handleChangePath(rest.path)
                                         }
 
-                                        return ''
-                                    }} />
-                            ))}
+                                        return (
+                                            <Transition timeout={1000}>
+                                                {status => (
+                                                    <Component {...props} className={`fade fade-${status}`} />
+                                                )}
+                                            </Transition>
+                                        )
+                                    }
 
-                        </Switch>
-                    </CoreLayout>
-                </React.StrictMode>
+                                    return ''
+                                }} />
+                        ))}
+
+                    </Switch>
+                </CoreLayout>
             </Router>
         )
     }

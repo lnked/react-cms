@@ -30,11 +30,8 @@ export default class CoreLayout extends React.Component<T, S> {
         pages: []
     }
 
-    componentWillMount () {
-        document.title = this.state.title
-    }
-
     componentDidMount () {
+        document.title = this.state.title
         SvgFixer()
         this.handleLoadPages()
     }

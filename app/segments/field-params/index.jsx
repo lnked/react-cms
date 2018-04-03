@@ -5,7 +5,6 @@ import css from './styles.scss'
 import { TextField } from 'components'
 
 export default class FieldParams extends Component {
-
     static propTypes = {
         name: PropTypes.string.isRequired,
         checked: PropTypes.oneOfType([
@@ -26,19 +25,11 @@ export default class FieldParams extends Component {
         handleChange: false
     }
 
-    constructor (props) {
-        super(props)
-
-        this.handleChange = this.handleChange.bind(this)
+    state = {
+        checked: this.props.checked
     }
 
-    componentWillMount () {
-        this.setState({
-            checked: this.props.checked
-        })
-    }
-
-    handleChange (value) {
+    handleChange = (value) => {
         this.setState({
             checked: value
         })
