@@ -8,8 +8,6 @@ import {
     Switch
 } from 'react-router-dom'
 
-import Transition from 'react-transition-group/Transition'
-
 // Layouts
 import { CoreLayout } from 'layouts'
 
@@ -167,10 +165,10 @@ export default class App extends React.Component<{}, S> {
                                     if (rest.path !== this.state.pathname) {
                                         if (rest.path) {
                                             console.log('render ', rest.path)
-                                        // this.handleChangePath(rest.path)
+                                            // this.handleChangePath(rest.path)
                                         }
 
-                                        return status => ( <Component {...props} className={`fade fade-${status}`} /> )
+                                        return status => <Component {...props} className={`fade fade-${status}`} />
                                     }
 
                                     return ''
