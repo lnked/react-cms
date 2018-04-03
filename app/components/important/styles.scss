@@ -12,25 +12,33 @@
 }
 
 .box.success {
-    color: #373e42;
-    background-color: #f6fff5;
-    border: 1px solid rgba(58, 193, 51, .12);
-    background-image: url(/img/documentation/icon-aside-important.svg);
+    // color: #373e42;
+    // background-color: #f6fff5;
+    // border: 1px solid rgba(58, 193, 51, .12);
+    // background-image: url(/img/documentation/icon-aside-important.svg);
+    color: #00897b;
+    background-color: #e0f2f1;
 }
 
 .box.warning {
-    background-color: $c-yellow;
-    border: 1px solid $c-yellow;
+    color: #dd2c00;
+    background-color: #fff3e0;
+    // background-color: $c-yellow;
+    // border: 1px solid $c-yellow;
 }
 
 .box.normal {
-    background-color: #f6fff5;
-    border: 1px solid #f6fff5;
+    // background-color: #f6fff5;
+    // border: 1px solid #f6fff5;
+    color: #0288d1;
+    background: #e1f5fe;
 }
 
 .box.info {
-    background-color: rgba(253, 200, 69, .1);
-    border: 1px solid rgba(253, 200, 69, .3);
+    background-color: #e8eaf6;
+    color: #3f51b5;
+    // background-color: rgba(253, 200, 69, .1);
+    // border: 1px solid rgba(253, 200, 69, .3);
 }
 
 .box.alternate {
@@ -39,6 +47,7 @@
 }
 
 .box.error {
-    background-color: rgba(224, 76, 76, .08);
-    border: 1px solid rgba(224, 76, 76, .1);
+    color: #d02020;
+    background-color: #ffdede;
+    // border: 1px solid rgba(224, 76, 76, .1);
 }
