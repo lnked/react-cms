@@ -1,11 +1,16 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
+interface P {
+    url: string;
+    method: 'get' | 'post' | 'put' | 'delete' | 'patch';
+}
+
 interface S {
     completed: number;
 }
 
-export default class Progress extends React.PureComponent<{}, S> {
+export default class Progress extends React.PureComponent<P, S> {
     state = {
         completed: 0
     }

@@ -5,11 +5,13 @@ import Dropzone from 'react-dropzone'
 
 interface S {
     files: Array<any>;
+    inProgress: boolean;
 }
 
 export default class FileUpload extends React.PureComponent<{}, S> {
     state = {
-        files: []
+        files: [],
+        inProgress: true
     }
 
     handleDrop = (acceptedFiles, rejectedFiles) => {
@@ -36,12 +38,20 @@ export default class FileUpload extends React.PureComponent<{}, S> {
     }
 
     render () {
+        const cn: Array<string> = []
+        const { files, inProgress } = this.state
+
         let dropzoneRef
-        const { files } = this.state
+
+        cn.push(css.dropzone)
+
+        if (inProgress) {
+            cn.push(css.active)
+        }
 
         return (
             <div>
-                <Dropzone ref={(node) => { dropzoneRef = node }} className={css.dropzone} onDrop={this.handleDrop}>
+                <Dropzone ref={(node) => { dropzoneRef = node }} className={cn.join(' ')} onDrop={this.handleDrop}>
                     <div className={css.dropzone__content}>
                         <p>Try dropping some files here, or click to select files to upload.</p>
                     </div>

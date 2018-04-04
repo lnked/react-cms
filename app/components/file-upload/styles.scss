@@ -1,5 +1,15 @@
 @import 'assets/styles/_global.scss';
 
+@keyframes abx {
+    0% { background-position: 0 0; }
+    100% { background-position: 240px 0; }
+}
+
+@keyframes aby {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 240px; }
+}
+
 .dropzone {
     $p: &;
     width: 100%;
@@ -32,6 +42,13 @@
         background-repeat: repeat-x;
         background-size: 12px 1px;
         transition: all $a-micro-time $a-func;
+    }
+
+    &.active {
+        &:after,
+        &:before {
+            animation: abx 10s linear infinite;
+        }
     }
 
     &:after {
@@ -80,6 +97,13 @@
             background-size: 1px 12px;
             background-repeat: repeat-y;
             transition: all $a-micro-time $a-func;
+        }
+
+        #{$p}.active & {
+            &:after,
+            &:before {
+                animation: aby 10s linear infinite;
+            }
         }
 
         &:after {
