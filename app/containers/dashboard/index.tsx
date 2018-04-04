@@ -21,6 +21,7 @@ import {
     Spinner,
     Sandwich,
     Quantity,
+    Progress,
     // Truncate,
     Important,
     Checkbox,
@@ -36,6 +37,13 @@ export default class Dashboard extends React.Component<{}, {}> {
         <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
             <FileUpload /><br /><br />
             <FileUpload />
+        </div>
+    )
+
+    renderProgress = () => (
+        <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid lime' }}>
+            <Progress /><br /><br />
+            <Progress />
         </div>
     )
 
@@ -344,6 +352,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
                 <Widget title="Использовано свободного места">
                     <div>
+                        {this.renderProgress()}
                         {this.renderSystem()}
                         {this.renderDropzone()}
                         {this.renderCopied()}

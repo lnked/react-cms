@@ -3,7 +3,7 @@ import * as React from 'react'
 
 import {
     BrowserRouter as Router,
-    Redirect,
+    // Redirect,
     Route,
     Switch
 } from 'react-router-dom'
@@ -141,14 +141,15 @@ export default class App extends React.Component<{}, S> {
     // }
 
     render () {
-        const { links, redirectToPreviousRoute } = this.state
+        // const { links, redirectToPreviousRoute } = this.state
+        const { links } = this.state
 
         // const { from } = this.props.location.state || { from: { pathname: '/' } }
-        const { from } = { from: { pathname: '/' } }
+        // const { from } = { from: { pathname: '/' } }
 
-        if (redirectToPreviousRoute) {
-            return <Redirect to={from} />
-        }
+        // if (redirectToPreviousRoute) {
+        //     return <Redirect to={from} />
+        // }
 
         // <button onClick={this.login}>Log in</button>
         // <SecretRoute path="/private" component={Auth} />
@@ -168,7 +169,7 @@ export default class App extends React.Component<{}, S> {
                                             // this.handleChangePath(rest.path)
                                         }
 
-                                        return status => <Component {...props} className={`fade fade-${status}`} />
+                                        return <Component {...props} />
                                     }
 
                                     return ''

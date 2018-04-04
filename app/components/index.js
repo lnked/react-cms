@@ -8,7 +8,7 @@ import Title from 'components/title'
 import Badge from 'components/badge'
 import Select from 'components/select'
 import Copied from 'components/copied'
-// import Layout from 'components/layout'
+import Progress from 'components/progress'
 import Button from 'components/button'
 import Switch from 'components/switch'
 import Notify from 'components/notify'
@@ -45,7 +45,6 @@ export {
     Title,
     Badge,
     Switch,
-    // Layout,
     Copied,
     Button,
     Notify,
@@ -54,6 +53,7 @@ export {
     Select,
     Spinner,
     Sandwich,
+    Progress,
     FileUpload,
     Quantity,
     Checkbox,
