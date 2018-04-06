@@ -2612,9 +2612,9 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   version "1.0.30000782"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000782.tgz#d8815bce1578c350aced1132507301205e0fab53"
 
-caniuse-lite@1.0.30000823:
-  version "1.0.30000823"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000823.tgz#b79842a5b5a48eaa416b73f5a5d7a23f52d26014"
+caniuse-lite@1.0.30000824:
+  version "1.0.30000824"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000824.tgz#de3bc1ba0bff4937302f8cb2a8632a8cc1c07f9a"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000780:
   version "1.0.30000782"
@@ -12467,9 +12467,9 @@ styled-components@3.2.5:
     stylis-rule-sheet "^0.0.10"
     supports-color "^3.2.3"
 
-stylelint-config-prettier@3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/stylelint-config-prettier/-/stylelint-config-prettier-3.0.4.tgz#1259093c1db2d5e8dfff7d9672f6f41db2101845"
+stylelint-config-prettier@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-prettier/-/stylelint-config-prettier-3.1.0.tgz#ec40ea4786d5f410048d8be9dfc86ffc393e41c7"
   dependencies:
     stylelint "^9.1.1"
 
