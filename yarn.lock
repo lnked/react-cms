@@ -379,12 +379,6 @@
     "@types/react-dnd" "*"
     "@types/react-virtualized" "*"
 
-"@types/react-transition-group@2.0.7":
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-2.0.7.tgz#2847292d54c5685d982ae5a3ecb6960946689d87"
-  dependencies:
-    "@types/react" "*"
-
 "@types/react-virtualized@*":
   version "9.7.12"
   resolved "https://registry.yarnpkg.com/@types/react-virtualized/-/react-virtualized-9.7.12.tgz#3dc212c0f94c9e9eab2fe7cb5a23db18ba2d1ee1"
@@ -396,9 +390,9 @@
   version "16.0.38"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.38.tgz#76617433ea10274505f60bb86eddfdd0476ffdc2"
 
-"@types/react@16.3.5":
-  version "16.3.5"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.5.tgz#bd3b21285602ea7cadb4b9e0d9711d96fd5692cc"
+"@types/react@16.3.6":
+  version "16.3.6"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.6.tgz#50cec71f14cbaaf49a53167dc1d6739be1d43f12"
   dependencies:
     csstype "^2.0.0"
 
