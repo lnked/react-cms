@@ -53,7 +53,7 @@
         "auth0-js": "9.4.2",
         "axios": "0.18.0",
         "babel-polyfill": "6.26.0",
-        "core-js": "2.5.4",
+        "core-js": "2.5.5",
         "dompurify": "1.0.3",
         "firebase": "4.12.1",
         "graphql": "0.13.2",
