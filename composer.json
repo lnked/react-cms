@@ -1,0 +1,33 @@
+{
+    "name": "lnked/react-cms",
+    "description": "Fast php cms with react controll panel",
+    "type": "project",
+    "require": {
+        "php": "7.0.* || 7.1.* || 7.2.*",
+        "phpfastcache/phpfastcache": "^6.1",
+        "vlucas/phpdotenv": "^2.4"
+    },
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Celebro dev",
+            "email": "ed.proff@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "modules\\": "modules/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.0"
+        },
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "vendor-dir": "fastest/vendors"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
