@@ -149,12 +149,14 @@ FileETag None
     AddDefaultCharset utf-8
 
     RewriteEngine On
-    RewriteBase /
+    RewriteBase /cp/
 
     RewriteRule ^index\.html$ - [L]
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-l
-    RewriteRule . /index.html [L]
 
+	RewriteCond $1 !^\.(web|css|js|png|jpg|gif|woff|eot|svg|ttf|robots\.txt)
+    # RewriteRule . /index.html [L]
+    RewriteRule ^(.*)$ index.html [L,QSA]
 </IfModule>

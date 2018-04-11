@@ -37,49 +37,51 @@ interface S {
     redirectToPreviousRoute: boolean;
 }
 
+const base = '/cp'
+
 const routes: any = [
     {
-        path: '/',
+        path: `${base}`,
         exact: true,
         component: Dashboard
     }, {
-        path: '/auth',
+        path: `${base}/auth`,
         component: Auth
     }, {
-        path: '/accounts',
+        path: `${base}/accounts`,
         component: Accounts
     }, {
-        path: '/shop',
+        path: `${base}/shop`,
         component: Shop
     }, {
-        path: '/tasks',
+        path: `${base}/tasks`,
         component: Tasks
     }, {
-        path: '/assets',
+        path: `${base}/assets`,
         component: Assets
     }, {
-        path: '/updates',
+        path: `${base}/updates`,
         component: Updates
     }, {
-        path: '/locale',
+        path: `${base}/locale`,
         component: Locale
     }, {
-        path: '/globals',
+        path: `${base}/globals`,
         component: Globals
     }, {
-        path: '/dashboard',
+        path: `${base}/dashboard`,
         component: Dashboard
     }, {
-        path: '/structure',
+        path: `${base}/structure`,
         component: Structure
     }, {
-        path: '/entities',
+        path: `${base}/entities`,
         component: Entities
     }, {
-        path: '/extensions',
+        path: `${base}/extensions`,
         component: Extensions
     }, {
-        path: '/settings',
+        path: `${base}/settings`,
         component: Settings
     }, {
         status: 404,
@@ -156,7 +158,7 @@ export default class App extends React.Component<{}, S> {
 
         return (
             <Router>
-                <CoreLayout links={links}>
+                <CoreLayout links={links} base={base}>
                     <Switch>
                         {routes.map(({ component: Component, ...rest }: any, key) => (
                             <Route

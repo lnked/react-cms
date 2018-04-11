@@ -2,10 +2,11 @@
 
 const { resolve } = require('path');
 
+const _path_ = 'cp';
 const _node_ = resolve(__dirname, '../node_modules');
 const _base_ = resolve(__dirname, '../');
 const _root_ = resolve(__dirname, '../app');
-const _dist_ = resolve(__dirname, '../dist');
+const _dist_ = resolve(__dirname, `../public_html/${_path_}/`);
 const _deploy_ = '/react-cms/';
 
 const isDeploy  = process.argv.includes('deploy');
@@ -22,6 +23,7 @@ const _port_ = process.env.PORT || 3000;
 process.env.NODE_ENV = isProduction ? 'production' : 'development';
 
 module.exports = {
+    rs_path: _path_,
     rs_host: _host_,
     rs_port: _port_,
     rs_base: _base_,
@@ -35,6 +37,6 @@ module.exports = {
     rs_generate_css: false, // isProduction
     rs_production: isProduction,
     rs_development: isDevelopment,
-    rs_output_path: isDeploy ? _deploy_ : '/',
+    rs_output_path: isDeploy ? _deploy_ : `/${_path_}/`,
     rs_environment: isProduction ? 'production' : 'development'
 }

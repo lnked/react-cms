@@ -11,6 +11,7 @@ import { Aside, Navigation, RequestsPanel, Sidebar } from 'segments'
 import { Title, GroupLinks } from 'components'
 
 interface T {
+    base?: string;
     links?: any;
     children?: string | React.ReactChild | React.ReactNode | any[];
 }
@@ -22,6 +23,7 @@ interface S {
 
 export default class CoreLayout extends React.Component<T, S> {
     static defaultProps = {
+        base: '',
         links: []
     }
 
@@ -42,7 +44,7 @@ export default class CoreLayout extends React.Component<T, S> {
 
     handleLoadPages = () => {
         axios
-            .get('/api/entities/pages.json')
+            .get('/cp/api/entities/pages.json')
             .then((response) => {
                 if (typeof (response.data) !== 'undefined') {
                     this.setState({ ...this.state, pages: response.data })
@@ -56,7 +58,7 @@ export default class CoreLayout extends React.Component<T, S> {
     renderSidebar = () => {
         const sbc: any = []
         const { pages } = this.state
-        const { links } = this.props
+        const { links, base } = this.props
 
         const submenuBlock: any = []
 
@@ -75,7 +77,7 @@ export default class CoreLayout extends React.Component<T, S> {
 
         return (
             <div className={sbc.join(' ')}>
-                <Sidebar pages={pages} />
+                <Sidebar pages={pages} base={base} />
                 {submenuBlock}
             </div>
         )

@@ -6,7 +6,7 @@
     "main": "index.js",
     "description": "React boilerplate, pwa, router",
     "scripts": {
-        "clean": "rm -rf ./dist",
+        "clean": "rm -rf ./public_html/cp",
         "svgstore": "rm -rf ./.cache && webpack --config ./webpack/prebuild.js",
         "prestart": "yarn run svgstore",
         "prebuild": "yarn run svgstore",
@@ -28,7 +28,7 @@
         "test:watch": "jest --watch --env test",
         "size": "npx size-limit",
         "serve": "firebase serve",
-        "deploy": "yarn run clean && webpack --config ./webpack/config.js --env deploy && gh-pages -d ./dist",
+        "deploy": "yarn run clean && webpack --config ./webpack/config.js --env deploy && gh-pages -d ./public_html/cp",
         "webpack-defaults": "webpack-defaults"
     },
     "keywords": [
@@ -41,7 +41,7 @@
     "author": "Edik Bulikyan <ed.proff@gmail.com> (https://celebro.ru)",
     "size-limit": [
         {
-            "path": "dist/js/*.js",
+            "path": "public_html/cp/js/*.js",
             "limit": "300 KB",
             "webpack": false
         }

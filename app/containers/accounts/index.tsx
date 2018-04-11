@@ -23,7 +23,7 @@ export default class Accounts extends React.Component<{}, S> {
 
     _handleComponentsLoad () {
         axios
-            .get('/api/entities/accounts.json')
+            .get('/cp/api/entities/accounts.json')
             .then((response) => {
                 this.setState({ components: response.data })
             })

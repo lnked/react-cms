@@ -20,7 +20,7 @@ export default class Updates extends React.Component<{}, S> {
 
     _handleReleasesLoad () {
         axios
-            .get('/api/entities/releases.json')
+            .get('/cp/api/entities/releases.json')
             .then((response) => {
                 this.setState({ releases: response.data })
             })

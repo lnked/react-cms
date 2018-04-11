@@ -28,7 +28,7 @@ export default class Locale extends React.Component<{}, S> {
 
     componentDidMount () {
         axios
-            .get('/api/entities/locales.json')
+            .get('/cp/api/entities/locales.json')
             .then((response) => {
                 this.setState({ locales: response.data })
             })

@@ -6,7 +6,7 @@
 /.flowconfig
 /.phpintel
 /___/
-/dist/
+/public_html/cp/
 /draft/
 /app/redux/
 /app/store.jsx

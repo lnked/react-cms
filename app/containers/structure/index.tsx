@@ -23,7 +23,7 @@ export default class Structure extends React.Component<{}, S> {
 
     _handleLoadStructure () {
         axios
-            .get('/api/entities/structure.json')
+            .get('/cp/api/entities/structure.json')
             .then((response) => {
                 this.setState({ treeData: response.data })
             })
