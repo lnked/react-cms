@@ -15,6 +15,8 @@ if (file_exists(FASTEST_BASE_PATH.'/.env')) {
     (new Dotenv\Dotenv(FASTEST_BASE_PATH))->load();
 }
 
+// exit(__();
+
 // // Load and run Craft
 // define('CRAFT_ENVIRONMENT', getenv('ENVIRONMENT') ?: 'production');
 // $app = require FASTEST_VENDOR_PATH.'/craftcms/cms/bootstrap/web.php';
