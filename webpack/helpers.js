@@ -9,6 +9,8 @@ const config = {
     cache: define.rs_production,
     inject: true,
     filetype: 'pug',
+    prefetch: ['**/*.chunk.js'],
+    preload: ['**/*.chunk.js'],
     production: define.rs_production,
     minify: define.rs_release && {
         keepClosingSlash: true,
@@ -50,7 +52,7 @@ module.exports.generateConfig = (script, template, chunksList) => {
 
     config.template = [template, 'pug'].join('.');
     config.filename = resolve(define.rs_dist, [script, 'html'].join('.'));
-    config.svgContext = fileContent('.cache/svgstore/svgstore.svg');
+    // config.svgContext = fileContent('.cache/svgstore/svgstore.svg');
 
     if (chunksList !== undefined) {
         config.chunks = chunksList;

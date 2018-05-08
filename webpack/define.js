@@ -2,12 +2,12 @@
 
 const { resolve } = require('path');
 
-const _path_ = 'cp';
+const _distBase_ = 'public_html/cp';
+
 const _node_ = resolve(__dirname, '../node_modules');
 const _base_ = resolve(__dirname, '../');
-const _root_ = resolve(__dirname, '../app');
-const _dist_ = resolve(__dirname, `../public_html/${_path_}/`);
-const _deploy_ = '/react-cms/';
+const _root_ = resolve(__dirname, '../src');
+const _dist_ = resolve(__dirname, `../${_distBase_}`);
 
 const isDeploy  = process.argv.includes('deploy');
 const isAnalyze = process.argv.includes('analyze');
@@ -20,23 +20,27 @@ const isDevelopment = process.argv.includes('development') || !isProduction;
 const _host_ = process.env.HOST || '0.0.0.0';
 const _port_ = process.env.PORT || 3000;
 
-process.env.NODE_ENV = isProduction ? 'production' : 'development';
+const staticAssetName = isDevelopment ? '[path][name].[ext]?[hash:8]' : '[hash:5].[ext]';
 
 module.exports = {
-    rs_path: _path_,
     rs_host: _host_,
     rs_port: _port_,
     rs_base: _base_,
     rs_root: _root_,
     rs_dist: _dist_,
     rs_node: _node_,
+    rs_distBase: _distBase_,
     rs_target: 'web', // 'web' | 'node' | electron-main | electron-renderer
     rs_deploy: isDeploy,
     rs_release: isRelease,
     rs_analyzer: isAnalyze,
     rs_generate_css: false, // isProduction
+    rs_contentBase: `./${_distBase_}`,
+    rs_asset_name: staticAssetName,
     rs_production: isProduction,
     rs_development: isDevelopment,
-    rs_output_path: isDeploy ? _deploy_ : `/${_path_}/`,
+    rs_output_path: isDevelopment
+                    ? '/'
+                    : './cp/assets/',
     rs_environment: isProduction ? 'production' : 'development'
 }

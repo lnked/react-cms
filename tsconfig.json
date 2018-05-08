@@ -1,11 +1,9 @@
 {
-    "buildOnSave": false,
-    "compileOnSave": true,
     "compilerOptions": {
         "jsx": "react",
-        "target": "es6",
+        "target": "es5",
         "module": "commonjs",
-        "outDir": "./public_html/cp",
+        "outDir": "dist",
         "allowJs": false,
         "sourceMap": true,
         "declaration": false,
@@ -24,116 +22,101 @@
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
         "moduleResolution": "node",
-        "baseUrl": "./",
+        "baseUrl": ".",
+        "mapRoot": "./",
+        "sourceRoot": "./",
         "preserveSymlinks": true,
         "allowSyntheticDefaultImports": true,
-        "paths": {
-            "*": [
-                "node_modules/@types/*"
-            ],
-            "hocs": [
-                "./app/hocs"
-            ],
-            "segments": [
-                "./app/segments"
-            ],
-            "layouts": [
-                "./app/layouts"
-            ],
-            "variables": [
-                "./app/variables"
-            ],
-            "containers": [
-                "./app/containers"
-            ],
-            "components": [
-                "./app/components"
-            ],
-            "typings": [
-                "./app/typings"
-            ],
-            "assets": [
-                "./app/assets"
-            ],
-            "utils": [
-                "./app/utils"
-            ],
-            "config": [
-                "./app/config"
-            ],
-            "styles": [
-                "./app/assets/styles"
-            ],
-            "images": [
-                "./app/assets/images"
-            ],
-            "scripts": [
-                "./app/assets/scripts"
-            ],
-            "svgstore": [
-                "./app/assets/svgstore"
-            ],
-            "store": [
-                "./app/redux/store"
-            ],
-            "actions": [
-                "./app/redux/actions"
-            ],
-            "reducers": [
-                "./app/redux/reducers"
-            ]
-        },
+        "inlineSourceMap": false,
+        "inlineSources": false,
+        "preserveConstEnums": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
         "types": [
             "node",
             "jest",
             "react",
-            "core-js",
             "enzyme",
             "jest-styled-components",
             "styled-components"
         ],
         "typeRoots": [
-            "./typings",
-            "./node_modules/@types"
+            "typings",
+            "node_modules/@types"
         ],
-        "sourceRoot": "./",
-        "mapRoot": "./",
-        "inlineSourceMap": false,
-        "inlineSources": false,
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
         "lib": [
+            "es2016",
             "dom",
-            "es5",
-            "esnext",
-            "es2015.core",
-            "es2015.collection",
-            "es2015.symbol",
-            "es2015.iterable",
-            "es2015.promise"
-        ]
+            "es5"
+        ],
+
+        "paths": {
+            "*": ["src/*"],
+            "hocs": [
+                "src/hocs"
+            ],
+            "segments": [
+                "src/segments"
+            ],
+            "layouts": [
+                "src/layouts"
+            ],
+            "variables": [
+                "src/variables"
+            ],
+            "containers": [
+                "src/containers"
+            ],
+            "components": [
+                "src/components"
+            ],
+            "typings": [
+                "src/typings"
+            ],
+            "assets": [
+                "src/assets"
+            ],
+            "utils": [
+                "src/utils"
+            ],
+            "config": [
+                "src/config"
+            ],
+            "styles": [
+                "src/assets/styles"
+            ],
+            "images": [
+                "src/assets/images"
+            ],
+            "scripts": [
+                "src/assets/scripts"
+            ],
+            "svgstore": [
+                "src/assets/svgstore"
+            ]
+        }
     },
     "files": [
-        "./typings/json.d.ts",
-        "./typings/react.d.ts"
+        "typings/**/*.d.ts"
     ],
     "filesGlob": [
-        "./app/**/*.ts",
-        "./app/**/*.tsx",
-        "./app/**/*.scss",
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.scss",
         "!node_modules/**/*"
     ],
     "include": [
-        "./app/**/*"
+        "src/**/*.ts",
+        "src/**/*.tsx"
     ],
     "exclude": [
-        ".git",
-        "public_html",
+        "dist",
         "tests",
         "webpack",
         "typings",
         "coverage",
-        "node_modules"
+        "node_modules",
+        "**/node_modules/*"
     ],
     "awesomeTypescriptLoaderOptions": {
         "useCache": true,

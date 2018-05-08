@@ -4,7 +4,7 @@ coverage
 node_modules
 
 # tmp
-public_html/cp
+dist
 logs
 .cache
 .awcache

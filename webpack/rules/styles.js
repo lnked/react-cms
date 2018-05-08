@@ -3,7 +3,7 @@
 const { resolve } = require('path');
 const define = require('../define');
 const postcss = require('../postcss');
-const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const cssConfig = [
     {
@@ -24,7 +24,7 @@ const usesConfig = [
     {
         loader: "typings-for-css-modules-loader",
         options: {
-            sourceMap: define.rs_analyzer,
+            sourceMap: define.rs_development,
             importLoaders: 3,
             modules: true,
             namedExport: true,
@@ -35,7 +35,7 @@ const usesConfig = [
     {
         loader: 'postcss-loader',
         options: {
-            sourceMap: define.rs_development || define.rs_analyzer ? 'inline' : false,
+            sourceMap: define.rs_development,
             plugins: () => {
                 return postcss.plugins;
             }
@@ -44,7 +44,7 @@ const usesConfig = [
     {
         loader: 'sass-loader',
         options: {
-            sourceMap: define.rs_development || define.rs_analyzer,
+            sourceMap: define.rs_development,
             includePaths: [ define.rs_root ]
         }
     }
@@ -53,11 +53,10 @@ const usesConfig = [
 const rules = define.rs_generate_css ? [
         {
             test: /\.(s(a|c)ss)$/,
-            use: ExtractCssChunks.extract({
-                fallback: 'style-loader',
-                publicPath: '../',
-                use: usesConfig
-            }),
+            use: [
+                MiniCssExtractPlugin.loader,
+                ...usesConfig
+            ],
             include: [
                 define.rs_node,
                 define.rs_root
@@ -65,11 +64,10 @@ const rules = define.rs_generate_css ? [
         },
         {
             test: /\.css$/,
-            use: ExtractCssChunks.extract({
-                fallback: 'style-loader',
-                publicPath: '../',
-                use: cssConfig
-            })
+            use: [
+                MiniCssExtractPlugin.loader,
+                ...cssConfig
+            ]
         }
     ] : [
     {

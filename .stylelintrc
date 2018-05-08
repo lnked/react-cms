@@ -5,6 +5,9 @@
         "stylelint-config-styled-components",
         "stylelint-config-prettier"
     ],
+    "plugins": [
+        "stylelint-order"
+    ],
     "rules": {
         "indentation": 4,
         "string-quotes": "single",
@@ -14,7 +17,7 @@
         "selector-pseudo-class-no-unknown": [
             true,
             {
-                "ignorePseudoClasses": ["global"]
+                "ignorePseudoClasses": ["global", "default"]
             }
         ],
         "at-rule-no-unknown": [
@@ -22,12 +25,16 @@
                 "ignoreAtRules": [
                     "if",
                     "else",
-                    "extend",
                     "mixin",
-                    "include"
+                    "extend",
+                    "include",
+                    "critical",
+                    "custom-media",
+                    "custom-selector"
                 ]
             }
         ],
+        "order/properties-order": [],
         "no-eol-whitespace": [true, { "ignore": ["empty-lines"] } ],
         "no-descending-specificity": null,
         "selector-no-qualifying-type": true,

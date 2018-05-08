@@ -15,21 +15,20 @@ useConfig.push(
     }
 );
 
-if (define.rs_development) {
-    useConfig.push(
-        {
-            loader: 'react-hot-loader/webpack'
-        }
-    )
-}
-
 useConfig.push(
     {
         loader: 'babel-loader',
         options: {
-            cacheDirectory: define.rs_development,
-            extends: resolve(define.rs_base, '.babelrc')
+            babelrc: true,
+            // cacheDirectory: define.rs_development
+            cacheDirectory: define.rs_dist
         }
+    }
+);
+
+tsConfig.push(
+    {
+        loader: 'babel-loader'
     }
 );
 
@@ -44,7 +43,7 @@ const rules = [
         enforce: 'pre',
         test: /\.(j|t)s[x]?$/,
         options: {
-            fix: false //define.rs_production
+            fix: false
         },
         loader: 'eslint-loader',
         include: define.rs_root
